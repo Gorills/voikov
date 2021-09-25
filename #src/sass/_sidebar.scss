@@ -1,0 +1,29 @@
+.sidebar {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    // .sidebar__list
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 80px auto 0;
+    }
+
+    // .sidebar__item
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    // .sidebar__link
+
+    &__link {
+        color: rgba(0, 0, 0, 0.4);
+
+        &--active {
+            color: #000;
+            font-weight: 600;
+        }
+    }
+}

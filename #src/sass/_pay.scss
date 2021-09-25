@@ -1,0 +1,28 @@
+
+.pay {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    // .pay__item
+
+    &__item {
+        padding: 50px;
+        border: 1px solid #dedede;
+        width: 48%;
+        transition: $transition;
+
+        &:hover {
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+
+    // .pay__title
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,22 @@
+@mixin playfair {
+    font-family: 'Playfair', sans-serif;
+    font-weight: 400;
+}
+
+
+
+@mixin medium {
+    font-family: 'Montseratt Medium', sans-serif;
+    font-weight: 400;
+}
+
+
+@mixin semibold {
+    font-family: 'Montseratt Semi-Bold', sans-serif;
+    font-weight: 500;
+}
+
+@mixin bold {
+    font-family: 'Montseratt Bold', sans-serif;
+    font-weight: 700;
+}

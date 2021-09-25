@@ -1,0 +1,45 @@
+.nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: $gray;
+    &--fixed {
+        position: fixed;
+        top: 52px;
+        z-index: 99;
+    }
+    // .nav__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .nav__list
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    // .nav__item
+
+    &__item {
+        display: inline-block;
+
+    }
+    &__item + &__item {
+        margin-left: 48px;
+    }
+
+    // .nav__link
+
+    &__link {
+        color: $font-dark;
+        &:hover {
+            color: $hover;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.grid {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    // .grid__inner
+
+    &__inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    // .grid__row
+
+    &__row {
+        display: flex;
+    }
+
+    // .grid__item
+
+    &__item {
+        position: relative;
+        width: 50%;
+        overflow: hidden;
+        height: 300px;
+        margin-bottom: 5px;
+        background-color: #000;
+
+        &:nth-child(1) {
+            margin-right: 5px;
+        }
+
+        // .grid__item--xs
+
+        &--xs {
+            width: 70%;
+            padding: 40px;
+            background-color: $gray;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            
+        }
+
+        // .grid__item--sm
+
+        &--sm {
+            width: 30%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba(59, 70, 88, .1);
+            transition: $transition;
+            
+        }
+
+        &:hover {
+            
+            &::after {
+                background: rgba(59, 70, 88, .6);
+            }
+
+            .grid__wrap {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    // .grid__wrap
+
+    &__wrap {
+        position: absolute;
+        z-index: 2;
+        top: 240px;
+        left: 0;
+        padding: 0 30px;
+        color: #fff;
+        transition: $transition;
+
+    }
+
+    // .grid__img
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // .grid__title
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    // .grid__desc
+
+    &__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    // .grid__xs-title
+
+    &__xs-title {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        
+    }
+
+    // .grid__xs-desc
+
+    &__xs-desc {
+    }
+}

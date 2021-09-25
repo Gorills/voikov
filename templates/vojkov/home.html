@@ -1,0 +1,406 @@
+
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %}
+{% block description %} {% endblock %}
+{% block keywords %}  {% endblock %}
+{% block canonical %} {% endblock %}
+{% block og:title %}{% endblock %}
+{% block og:description %} {% endblock %}
+{% block og:url %}  {% endblock %}
+{% block twitter:title %}{% endblock %}
+{% block twitter:description %}{% endblock %}
+{% block vk:image %}{% endblock %}
+{% block og:image %}{% endblock %}
+
+
+{% block body %}
+{% load static %}
+
+
+<div class="slide">
+    <div class="container">
+        <div class="slide__inner">
+        
+        
+            <h1 class="slide__title">Резиденция</h1>
+        </div>
+    </div>
+    <img src="{% static 'images/slide.jpg' %}" alt="" class="slide__bg">
+</div>
+
+<div class="nav">
+    <div class="container">
+        <div class="nav__inner">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="" class="nav__link">Преимущества квартир</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Генплан</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Инфраструктура</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Ход строительства</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Документы</a></li>
+            </ul>
+
+
+
+
+            <a href="{% url 'layouts' %}" class="btn">Выбрать квартиру</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="grid">
+    <div class="container">
+        <div class="grid__inner">
+            <div class="grid__row">
+                <div class="grid__item">
+                    <img src="{% static 'images/grid.jpg' %}" alt="" class="grid__img">
+                    <div class="grid__wrap">
+                        <h3 class="grid__title">Дом-квартал рядом с центром</h3>
+                        <p class="grid__desc">
+                        Квартал «Резиденция» расположен в Центральном районе на пересечении улиц Мяготина и Савельева. До Площади им. Ленина и Центрального стадион — 6 минут на автомобиле, 17 минут пешком. В пешей доступности — Старообрядческий сквер, гимназия № 27 и детский сад № 61.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <img src="{% static 'images/grid.jpg' %}" alt="" class="grid__img">
+                    <div class="grid__wrap">
+                        <h3 class="grid__title">Дом-квартал рядом с центром</h3>
+                        <p class="grid__desc">
+                        Квартал «Резиденция» расположен в Центральном районе на пересечении улиц Мяготина и Савельева. До Площади им. Ленина и Центрального стадион — 6 минут на автомобиле, 17 минут пешком. В пешей доступности — Старообрядческий сквер, гимназия № 27 и детский сад № 61.
+                        </p>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="grid__row">
+                <div class="grid__item--xs">
+                    <p class="grid__xs-title">Умная ипотека 2,05%</p>
+                    <p class="grid__xs-desc">Квартиры с выгодой до 240 тыс. руб.</p>
+
+                
+                </div>
+                
+                <div class="grid__item grid__item--sm">
+                    <img src="{% static 'images/grid.jpg' %}" alt="" class="grid__img">
+
+
+                    <div class="grid__wrap">
+                        <h3 class="grid__title">Дом-квартал рядом с центром</h3>
+                        <p class="grid__desc">
+                        Квартал «Резиденция» расположен в Центральном районе на пересечении улиц Мяготина и Савельева. До Площади им. Ленина и Центрального стадион — 6 минут на автомобиле, 17 минут пешком. В пешей доступности — Старообрядческий сквер, гимназия № 27 и детский сад № 61.
+                        </p>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="grid__row">
+                <div class="grid__item">
+                    <img src="{% static 'images/grid.jpg' %}" alt="" class="grid__img">
+                    <div class="grid__wrap">
+                        <h3 class="grid__title">Дом-квартал рядом с центром</h3>
+                        <p class="grid__desc">
+                        Квартал «Резиденция» расположен в Центральном районе на пересечении улиц Мяготина и Савельева. До Площади им. Ленина и Центрального стадион — 6 минут на автомобиле, 17 минут пешком. В пешей доступности — Старообрядческий сквер, гимназия № 27 и детский сад № 61.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <img src="{% static 'images/grid.jpg' %}" alt="" class="grid__img">
+                    <div class="grid__wrap">
+                        <h3 class="grid__title">Дом-квартал рядом с центром</h3>
+                        <p class="grid__desc">
+                        Квартал «Резиденция» расположен в Центральном районе на пересечении улиц Мяготина и Савельева. До Площади им. Ленина и Центрального стадион — 6 минут на автомобиле, 17 минут пешком. В пешей доступности — Старообрядческий сквер, гимназия № 27 и детский сад № 61.
+                        </p>
+                    </div>
+                </div>
+            
+            </div>
+
+        
+        
+        </div>
+    </div>
+</div>
+
+
+
+<div class="block">
+
+                
+    
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                <div class="sidebar">
+
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+                        <li class="sidebar__item"><a href="#" class="sidebar__link">Район</a></li>
+
+                    </ul>
+                
+                
+                </div>
+
+                <div class="block__content">
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">Район</h2>
+                        <p class="block__subtitle">Развитый район города</p>
+
+                        <p class="block__text">Квартал «Резиденция» расположен на тихой территории рядом с крупными городскими магистралями, в Центральном районе на пересечении улиц Мяготина и Савельева. Рядом находится остановка общественного транспорта, с которой можно добраться до центра города. В районе уже сформирована инфраструктура: в пешей доступности — гимназия, школа, четыре детских сада, поликлиники, центральный стадион, Курганский государственный университет, сквер. На первых этажах новых домов предусмотрены повседневные сервисы для жителей: магазины, кафе, аптеки и другие.</p>
+                    </div>
+
+                    <img src="{% static 'images/grid.jpg' %}" alt="" class="block__img">
+
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="block block--gray" id="block-2">
+
+                
+    
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+                <div class="block__content">
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">Район</h2>
+                        <p class="block__subtitle">Развитый район города</p>
+
+                        <p class="block__text">Квартал «Резиденция» расположен на тихой территории рядом с крупными городскими магистралями, в Центральном районе на пересечении улиц Мяготина и Савельева. Рядом находится остановка общественного транспорта, с которой можно добраться до центра города. В районе уже сформирована инфраструктура: в пешей доступности — гимназия, школа, четыре детских сада, поликлиники, центральный стадион, Курганский государственный университет, сквер. На первых этажах новых домов предусмотрены повседневные сервисы для жителей: магазины, кафе, аптеки и другие.</p>
+                    </div>
+
+                   
+
+                
+                </div>
+
+                <div class="block__slider-wrap">
+
+                    <div class="block__slider">
+
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/1.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/2.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/3.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/4.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/5.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/6.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+                        <div class="block__slide">
+                            <img src="{% static 'images/block/6.jpg' %}" alt="" class="block__slide-img">
+                        
+                        </div>
+
+
+
+                
+                    </div>
+
+                    
+
+                    <div class="block__slider-nav">
+                        <img src="{% static 'images/block/1.jpg' %}" alt="">
+                        <img src="{% static 'images/block/2.jpg' %}" alt="">
+                        <img src="{% static 'images/block/3.jpg' %}" alt="">
+                        <img src="{% static 'images/block/4.jpg' %}" alt="">
+                        <img src="{% static 'images/block/5.jpg' %}" alt="">
+                        <img src="{% static 'images/block/6.jpg' %}" alt="">
+                        <img src="{% static 'images/block/6.jpg' %}" alt="">
+
+
+                    
+                    </div>
+
+
+                
+                </div>
+
+            
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="block" id="block-2">
+
+                
+    
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+                <div class="block__content">
+
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">Район</h2>
+                        <p class="block__subtitle">Развитый район города</p>
+
+                        <p class="block__text">Квартал «Резиденция» расположен на тихой территории рядом с крупными городскими магистралями, в Центральном районе на пересечении улиц Мяготина и Савельева. Рядом находится остановка общественного транспорта, с которой можно добраться до центра города. В районе уже сформирована инфраструктура: в пешей доступности — гимназия, школа, четыре детских сада, поликлиники, центральный стадион, Курганский государственный университет, сквер. На первых этажах новых домов предусмотрены повседневные сервисы для жителей: магазины, кафе, аптеки и другие.</p>
+                    </div>
+
+                    
+                
+                </div>
+
+                <div class="block__grid">
+                    <div class="block__item">
+                        <img src="{% static 'images/block/1.jpg' %}" alt="" class="block__item-img">
+
+                    </div>
+                    <div class="block__item">
+                        <img src="{% static 'images/block/2.jpg' %}" alt="" class="block__item-img">
+
+                    </div>
+                    <div class="block__item">
+                        <img src="{% static 'images/block/3.jpg' %}" alt="" class="block__item-img">
+
+                    </div>
+                    <div class="block__item">
+                        <img src="{% static 'images/block/4.jpg' %}" alt="" class="block__item-img">
+
+                    </div>
+                    
+                    
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="benefits">
+    <div class="container">
+        <div class="benefits__inner">
+            <h2 class="title">Преимущества квартир</h2>
+
+            <div class="benefits__row">
+                <div class="benefits__item">
+                    <img src="{% static 'images/benefits.jpg' %}" alt="" class="benefits__img">
+                    <p class="benefits__title">Двухуровневые квартиры</p>
+                </div>
+                <div class="benefits__item">
+                    <img src="{% static 'images/benefits.jpg' %}" alt="" class="benefits__img">
+                    <p class="benefits__title">Двухуровневые квартиры</p>
+                </div>
+                <div class="benefits__item">
+                    <img src="{% static 'images/benefits.jpg' %}" alt="" class="benefits__img">
+                    <p class="benefits__title">Двухуровневые квартиры</p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="standart">
+    <div class="container">
+        <div class="standart__inner">
+
+        <h2 class="title">Генплан</h2>
+        
+        
+        </div>
+    </div>
+    <img class="standart__bg" src="{% static 'images/gen.jpg' %}" alt="">
+</div>
+
+
+<div class="standart">
+    <div class="container">
+        <div class="standart__inner">
+
+        <h2 class="title">Инфраструктура района</h2>
+        
+        
+        </div>
+    </div>
+
+    <div class="standart__map">
+        <a class="dg-widget-link" href="http://2gis.ru/tomsk/firm/70000001020919359/center/84.93813514709473,56.50818767711524/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Томска</a><div class="dg-widget-link"><a href="http://2gis.ru/tomsk/firm/70000001020919359/photos/70000001020919359/center/84.93813514709473,56.50818767711524/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.ru/tomsk/center/84.938167,56.507035/zoom/16/routeTab/rsType/bus/to/84.938167,56.507035╎Ярче!, сеть супермаркетов?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Ярче!, сеть супермаркетов</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":840,"height":400,"borderColor":"#a3a3a3","pos":{"lat":56.50818767711524,"lon":84.93813514709473,"zoom":16},"opt":{"city":"tomsk"},"org":[{"id":"70000001020919359"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+    </div>
+    
+</div>
+
+<div class="standart">
+    <div class="container">
+        <div class="standart__inner">
+            <h2 class="title">Способы покупки</h2>
+
+            <div class="pay">
+
+
+                <div class="pay__item">
+                    <p class="pay__title">Ипотека</p>
+                    <p class="pay__text">Рассчитайте ежемесячный платёж и проконсультируйтесь с нашим специалистом. 90% заявок, оформленных в офисе Брусники, получают одобрение.</p>
+
+
+                </div>
+                <div class="pay__item">
+                    <p class="pay__title">Обмен</p>
+                    <p class="pay__text">Компания купит вашу квартиру, даже если она в ипотеке. Квартира оценивается по средней рыночной стоимости. Полученные деньги пойдут на покупку новой от Брусники.</p>
+
+
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="video">
+    <div class="container">
+        <div class="video__inner">
+        <h2 class="title">Видео</h2>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/bAx9Gi3Tg3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

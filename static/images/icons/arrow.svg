@@ -1,0 +1,20 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="29" height="62" viewBox="0 0 29 62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #565f6c;
+        stroke-linejoin: round;
+        stroke-opacity: 0.5;
+        stroke-width: 1px;
+        filter: url(#drop-shadow-1);
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g style="fill: #fff;">
+    <path d="M25.087,55.989 L22.740,58.041 L3.762,31.015 L22.721,3.967 L25.228,5.882 L7.618,31.027 L25.087,55.989 Z" id="path-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-1"/>
+  </g>
+  <use xlink:href="#path-1" style="stroke: #565f6c; filter: none; fill: none"/>
+</svg>
