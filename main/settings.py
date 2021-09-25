@@ -36,7 +36,6 @@ except ImportError:
 
 from .local_settings import DEBUG
 
-from .local_settings import ALLOWED_HOSTS
 
 
 
