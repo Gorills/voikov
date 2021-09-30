@@ -102,16 +102,8 @@ $(document).ready(function(){
 })
 
 
-// var postion = $('#block-1').offset().top,
-//     height = $('#block-1').height();
-// $(document).on('scroll', function (){
-//   var scroll = $(document).scrollTop();
-//   if(scroll  > postion && scroll < (postion + height) ) {
-//      $('#link-1').addClass('sidebar__link--active')
-//      }else {
-//         $('#link-1').removeClass('sidebar__link--active ')
-//      }
-// })
+
+
 
 
 
@@ -143,6 +135,7 @@ $('.block__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
+    swipe: false,
 
     fade: true,
     asNavFor: '.layout__nav',
@@ -158,5 +151,6 @@ $('.block__slider').slick({
     dots: false,
     arrows: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    swipe: false,
   });

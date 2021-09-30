@@ -1,17 +1,16 @@
 
 {% extends 'base.html' %}
 
-{% block title %}  {% endblock %}
-{% block description %} {% endblock %}
+{% block title %} Купить {{ layout.name }} {{layout.area}} кв.м. в Томске на Войкова{% endblock %}
+{% block description %} Продажа {{ layout.name }} от застройщика в Томске. Без комиссий и переплат {% endblock %}
 {% block keywords %}  {% endblock %}
-{% block canonical %} {% endblock %}
-{% block og:title %}{% endblock %}
-{% block og:description %} {% endblock %}
-{% block og:url %}  {% endblock %}
-{% block twitter:title %}{% endblock %}
-{% block twitter:description %}{% endblock %}
-{% block vk:image %}{% endblock %}
-{% block og:image %}{% endblock %}
+{% block canonical %} {{ layout.get_absolute_url }} {% endblock %}
+{% block og:title %}Купить {{ layout.name }} {{layout.area}} кв.м. в Томске на Войкова{% endblock %}
+{% block og:description %} Продажа {{ layout.name }} от застройщика в Томске. Без комиссий и переплат {% endblock %}
+{% block og:url %} {{ layout.get_absolute_url }} {% endblock %}
+{% block twitter:title %}Купить {{ layout.name }} {{layout.area}} кв.м. в Томске на Войкова{% endblock %}
+{% block twitter:description %}Продажа {{ layout.name }} от застройщика в Томске. Без комиссий и переплат {% endblock %}
+
 
 
 {% block body %}
@@ -25,6 +24,7 @@
 
             <li class="breadcrumbs__item"><div class="breadcrumbs__link">{{ layout.name }}</div></li>
         </div>
+        
     </div>
 
 </div>
@@ -35,7 +35,11 @@
     <div class="container">
         <div class="layouts__inner">
             <h1 class="title">{{ layout.name }} {{layout.area}} м<sup>2</sup></h1>
-
+            <div class="share">
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,facebook,odnoklassniki,telegram,whatsapp"></div>
+            </div>
+                
             <div class="layout">
                 <div class="layout__left">
                     <div class="layout__wrap">

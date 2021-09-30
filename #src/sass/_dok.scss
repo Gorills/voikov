@@ -1,0 +1,45 @@
+.dok {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    // .dok__inner
+
+    &__inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    // .dok__wrap
+
+    &__wrap {
+        padding: 0 0 20px 0;
+    }
+
+    // .dok__title
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 500;    
+    }
+
+    // .dok__row
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    // .dok__link
+
+    &__link {
+        width: 50%;
+        margin-bottom: 20px;
+        color: #000000;
+
+        i {
+            color: $primary;
+            margin-right: 10px;
+        }
+    }
+}

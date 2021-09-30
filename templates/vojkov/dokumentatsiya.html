@@ -1,0 +1,65 @@
+
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+{% block description %}  {% endblock %}
+{% block keywords %}  {% endblock %}
+{% block canonical %} {% endblock %}
+{% block og:title %}{% endblock %}
+{% block og:description %}  {% endblock %}
+{% block og:url %}  {% endblock %}
+{% block twitter:title %}{% endblock %}
+{% block twitter:description %} {% endblock %}
+
+
+
+{% block body %}
+{% load static %}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="{% url 'home' %}" class="breadcrumbs__link">Главная</a></li>
+           
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Документация</div></li>
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="dok">
+    <div class="container">
+        <div class="dok__inner">
+            <h1 class="title">Документация</h1>
+
+            {% for doc in docs %}
+            <div class="dok__wrap">
+                <h2 class="dok__title">{{doc.name}}</h2>
+
+                <div class="dok__row">
+                    {% for d in doc.doc.all %}
+
+                        <a target="_blank" href="{{ d.file.url }}" class="dok__link"><i class="far fa-file-alt"></i> {{ d.name }}</a>
+                    {% endfor %}
+                </div>
+            
+            
+            </div>
+            
+            
+            
+            
+            
+            {% endfor %}
+            
+            
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

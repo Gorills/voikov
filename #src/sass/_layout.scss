@@ -1,7 +1,7 @@
 .layout {
     display: flex;
     border-top: 1px solid #e1e1e1;
-    padding: 40px 0;
+    
     // .layout__left
 
     &__left {
@@ -9,6 +9,7 @@
         width: 100%;
         max-width: 60%;
         padding-right: 20px;
+        padding: 40px 0 40px 0;
         
     }
 
@@ -38,6 +39,7 @@
 
     &__prev {
         text-align: center;
+        margin: 0 auto; 
     }
 
     // .layout__side
@@ -83,7 +85,7 @@
     &__column {
         width: 100%;
         max-width: 398px;
-        padding-left: 20px;
+        padding: 40px 0 40px 20px;
         margin: 0 auto;
     }
 
@@ -192,4 +194,10 @@
             background-color: #272e39;
         }
     }
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+
 }
+
