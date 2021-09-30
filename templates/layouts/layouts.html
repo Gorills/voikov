@@ -34,21 +34,24 @@
             <h1 class="title">Выбор квартир</h1>
 
             <div class="layouts__grid">
+
+
+            {% for lay in layouts %}
             
-                <a href="#" class="layouts__item">
+                <a href="{{ lay.get_absolute_url }}" class="layouts__item">
                     <div class="layouts__img-wrap">
-                        <img src="{% static 'images/1.svg' %}" alt="" class="layouts__img">
+                        <img src="{{ lay.plan.url }}" alt="" class="layouts__img">
                     </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
+                    <p class="layouts__title">{{ lay.name }}, {{lay.area}} м<sup>2</sup></p>
+                    <p class="layouts__price">от {{ lay.price }}</p>
 
                     <div class="layouts__bottom">
                         <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
+                            <p class="layouts__home">Дом {{ lay.home }}</p>
                         </div>
                         <div class="layouts__col">
                             <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
+                            <p class="layouts__date">до {{ lay.keys }}</p>
                         </div>
                     
                     </div>
@@ -56,158 +59,9 @@
 
 
                 </a>
+            {% endfor %}
 
-
-                <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/2.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
-
-
-                 <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/2.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
-
-                <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/1.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
-                 <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/2.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
-                 <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/2.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
-                 <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/2.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
-                 <a href="#" class="layouts__item">
-                    <div class="layouts__img-wrap">
-                        <img src="{% static 'images/2.svg' %}" alt="" class="layouts__img">
-                    </div>
-                    <p class="layouts__title">1 комнатная квартира, 93,7м</p>
-                    <p class="layouts__price">от 7 850 000</p>
-
-                    <div class="layouts__bottom">
-                        <div class="layouts__col">
-                            <p class="layouts__home">Дом 1</p>
-                        </div>
-                        <div class="layouts__col">
-                            <p class="layouts__sub">Передача ключей</p>
-                            <p class="layouts__date">до 31 марта 2023</p>
-                        </div>
-                    
-                    </div>
-
-
-
-                </a>
+                
             
             
             </div>

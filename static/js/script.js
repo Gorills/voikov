@@ -25,6 +25,10 @@ $(".toggle-menu").click(function (e) {
   $(".menu-btn").toggleClass('menu-btn_active');
   $(".header__drop").toggleClass('header__drop--active');
 });
+$(".header__drop").mouseleave(function () {
+  $(".menu-btn").removeClass('menu-btn_active');
+  $(".header__drop").removeClass('header__drop--active');
+});
 jQuery(document).ready(function ($) {
   var url = document.location.href;
   $.each($(".header__link"), function () {
@@ -85,6 +89,24 @@ $('.block__slider-nav').slick({
   infinite: true,
   slidesToScroll: 1,
   asNavFor: '.block__slider',
+  dots: false,
+  arrows: false,
+  centerMode: true,
+  focusOnSelect: true
+});
+$('.layout__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true,
+  fade: true,
+  asNavFor: '.layout__nav',
+  arrows: false
+});
+$('.layout__nav').slick({
+  slidesToShow: 3,
+  infinite: true,
+  slidesToScroll: 1,
+  asNavFor: '.layout__slider',
   dots: false,
   arrows: false,
   centerMode: true,

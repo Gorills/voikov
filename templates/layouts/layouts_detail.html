@@ -1,0 +1,142 @@
+
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %}
+{% block description %} {% endblock %}
+{% block keywords %}  {% endblock %}
+{% block canonical %} {% endblock %}
+{% block og:title %}{% endblock %}
+{% block og:description %} {% endblock %}
+{% block og:url %}  {% endblock %}
+{% block twitter:title %}{% endblock %}
+{% block twitter:description %}{% endblock %}
+{% block vk:image %}{% endblock %}
+{% block og:image %}{% endblock %}
+
+
+{% block body %}
+{% load static %}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="{% url 'home' %}" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="{% url 'layouts' %}" class="breadcrumbs__link">Выобр квартир</a></li>
+
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">{{ layout.name }}</div></li>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="layouts">
+    <div class="container">
+        <div class="layouts__inner">
+            <h1 class="title">{{ layout.name }} {{layout.area}} м<sup>2</sup></h1>
+
+            <div class="layout">
+                <div class="layout__left">
+                    <div class="layout__wrap">
+                        <div class="layout__slider">
+                            <div><img src="{{ layout.plan.url }}" alt="" class="layout__img"></div>
+                            <div><img src="{{ layout.at_flore.url }}" alt="" class="layout__img"></div>
+                            <div><img src="{{ layout.section.url }}" alt="" class="layout__img"></div>
+                            
+                            
+
+                            
+
+
+                        
+                        </div>
+
+
+                        <div class="layout__prev">
+                            <img src="{{ layout.side.img.url }}" alt="" class="layout__side">
+                            <img src="{{ layout.at_flore.url }}" alt="" class="layout__atflore">
+                        
+                        </div>
+
+                    </div>
+
+                    <div class="layout__nav">
+                        <div class="layout__nav-item">Планировка</div>
+                        <div class="layout__nav-item">На этаже</div>
+                        <div class="layout__nav-item">План секции</div>
+
+                    
+                    </div>
+                
+                
+                </div>
+                <div class="layout__column">
+
+                    <div class="layout__column-wrap">
+                        <div class="layout__column-item">
+                            <p class="layout__column-label">Проект</p>
+                            <p class="layout__column-text">{{ layout.project }}</p>
+                        </div>
+                        <div class="layout__column-item">
+                            {% if layout.home.done %}
+                                <p class="layout__column-text">Дом сдан</p>
+                                
+                            {% else %}
+
+                                <p class="layout__column-label">Передача ключей</p>
+                                <p class="layout__column-text">до {{ layout.home.date }}</p>
+
+                            {% endif %}
+
+                            
+                        </div>
+                    
+                    </div>
+                    <div class="layout__column-wrap">
+                        <div class="layout__column-item">
+                            <p class="layout__column-label">Дом</p>
+                            <p class="layout__column-text">{{ layout.home.name }}</p>
+                        </div>
+                        <div class="layout__column-item">
+                            
+                                <p class="layout__column-label">Площадь</p>
+                                <p class="layout__column-text">{{ layout.area  }} м<sup>2</sup></p>
+
+                                                
+                        </div>
+                    
+                    </div>
+                    <div class="layout__column-wrap">
+
+                        <div class="layout__column-col">
+                            <p class="layout__column-price"><span>От</span> {{ layout.price }} <span>руб.</span></p>
+
+                            <div class="layout__column-ipo">
+                                <p class="layout__column-text">Ипотека</p>
+                                <p class="layout__column-staf"><span>5,85% </span>от 33 800 руб/мес</p>
+
+                            </div>
+
+                            <a href="#" class="layout__obm">Обмен</a>
+
+
+                            <a href="#" class="layout__column-btn">Забронировать</a>
+                        </div>
+                    </div>
+                
+                
+                
+                </div>
+            
+            
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
