@@ -1,0 +1,40 @@
+.callback {
+    padding: 80px 0;
+    width: 100%;
+    margin: 0 auto;
+    // .callback__inner
+
+    &__inner {
+        background-color: $gray;
+        padding: 80px 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    // .callback__title
+
+    &__title {
+        font-size: 28px;
+        line-height: 34px;
+        
+        margin-bottom: 16px;
+    }
+
+    // .callback__sub
+
+    &__sub {
+        margin-bottom: 40px;
+    }
+
+    // .callback__wrap
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a + a {
+            margin-left: 20px;
+        }
+    }
+}

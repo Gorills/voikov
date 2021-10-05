@@ -15,16 +15,26 @@
         <div class="container">
             <div class="header__inner">
                 <a href="{% url 'home' %}" class="header__logo">
-                    <img src="{% static 'images/logo.svg' %}" alt="logo">
+                    <img src="{% static 'images/logo-dark.svg' %}" alt="logo">
                 
                 </a>
 
                 <nav class="header__nav">
                     <ul class="header__list">
-                        <li class="header__item"><a href="#" class="header__link">Компания</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Квартиры</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Ипотека</a></li>
-                        <li class="header__item"><a href="#" class="header__link">Обмен</a></li>
+                       
+                        <li class="header__item"><a href="{% url 'layouts' %}" class="header__link">Квартиры</a></li>
+                     
+
+                        {% for page in request.page_list %}
+                            {% if page.top_menu %}
+                                
+                                <li class="header__item"><a href="{{ page.get_absolute_url }}" class="header__link">{{page.name}}</a></li>
+                            {% endif %}
+                        
+                            
+                        
+                        {% endfor %}
+
                         <li class="header__item">
                         
                         <div class="toggle-menu" id="menu">
@@ -62,6 +72,12 @@
                 <p class="header__drop-title">Покупателям</p>
 
                 <ul class="header__drop-list">
+                {% for page in request.page_list %}
+                    {% if page.drop_menu_left %}
+                        <li class="header__drop-item"><a href="{{ page.get_absolute_url }}" class="header__drop-link">{{ page.name }}</a></li>
+                    
+                    {% endif %}
+                {% endfor %}
                     <li class="header__drop-item"><a href="" class="header__drop-link">Онлайн покупка квартиры</a></li>
                     <li class="header__drop-item"><a href="" class="header__drop-link">Ипотека</a></li>
                     <li class="header__drop-item"><a href="" class="header__drop-link">Обмен</a></li>
@@ -73,6 +89,12 @@
                 <p class="header__drop-title">Компания</p>
 
                 <ul class="header__drop-list">
+                {% for page in request.page_list %}
+                    {% if page.drop_menu_right %}
+                        <li class="header__drop-item"><a href="{{ page.get_absolute_url }}" class="header__drop-link">{{ page.name }}</a></li>
+                    
+                    {% endif %}
+                {% endfor %}
                     <li class="header__drop-item"><a href="" class="header__drop-link">О компании</a></li>
                     <li class="header__drop-item"><a href="" class="header__drop-link">По вопросам партнерства</a></li>
                     <li class="header__drop-item"><a href="{% url 'dok' %}" class="header__drop-link">Официальные документы</a></li>

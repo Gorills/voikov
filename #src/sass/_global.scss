@@ -83,6 +83,7 @@ a   {
     font-size: 16px;
     color: #fff;
     background-color: #3b4658;
+    border: 1px solid #3b4658;
     cursor: pointer;
     -webkit-transition: background-color 0.3s ease, opacity 0.3s ease;
     transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -92,6 +93,14 @@ a   {
     user-select: none;
     width: 250px;
     height: 52px;
+
+    &__nobg {
+        background: none;
+        color: #14191a;
+        &:hover {
+            color: #ffffff;
+        }
+    }
     &:hover {
         background-color: $dark-blue;
     }

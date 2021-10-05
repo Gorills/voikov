@@ -1,0 +1,74 @@
+
+{% extends 'base.html' %}
+
+{% block title %} {{ page.metatitle }} {% endblock %}
+{% block description %} {{ page.metadesc }} {% endblock %}
+{% block keywords %} {{ page.metakey }} {% endblock %}
+{% block canonical %} {{ page.get_absolute_url }} {% endblock %}
+{% block og:title %}{{ page.metatitle }}{% endblock %}
+{% block og:description %} {{ page.metadesc }} {% endblock %}
+{% block og:url %} {{ page.get_absolute_url }} {% endblock %}
+{% block twitter:title %}{{ page.metatitle }}{% endblock %}
+{% block twitter:description %}{{ page.metadesc }} {% endblock %}
+
+
+    
+     
+
+{% block body %}
+{% load static %}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="{% url 'home' %}" class="breadcrumbs__link">Главная</a></li>
+           
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">{{ page.name }}</div></li>
+        </div>
+        
+    </div>
+
+</div>
+
+
+<div class="page">
+    <div class="container">
+        <div class="page__inner">
+            <h1 class="title">{{ page.name }}</h1>
+
+            <div class="page__wrap">
+                {{ page.text | safe }}
+            
+            
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+{% include 'parts/callback.html' %}
+
+
+{% for block in page.block.all %}
+
+
+<div class="page" style="background: {{ block.color }};">
+    <div class="container">
+        <div class="page__inner">
+            <h2 class="title">{{ block.name }}</h1>
+
+            <div class="page__wrap">
+                {{ block.text | safe }}
+            
+            
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

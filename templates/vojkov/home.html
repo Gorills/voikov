@@ -37,7 +37,7 @@
                 <li class="nav__item"><a href="" class="nav__link">Генплан</a></li>
                 <li class="nav__item"><a href="" class="nav__link">Инфраструктура</a></li>
                 <li class="nav__item"><a href="" class="nav__link">Ход строительства</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Документы</a></li>
+                <li class="nav__item"><a href="{% url 'dok' %}" class="nav__link">Документы</a></li>
             </ul>
 
 
@@ -397,6 +397,7 @@
 </div>
 
 
+{% include 'parts/callback.html' %}
 
 
 {% endblock %}

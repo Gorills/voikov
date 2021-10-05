@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-from .models import DocCat
+from .models import DocCat, Page
 # Create your views here.
 def home(request):
 
@@ -16,3 +16,12 @@ def dok(request):
 
 
     return render(request, 'vojkov/dokumentatsiya.html', context)
+
+
+def page(request, slug):
+    context = {
+        'page': Page.objects.get(slug=slug),
+    }
+
+
+    return render(request, 'vojkov/page.html', context)
