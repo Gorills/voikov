@@ -5,9 +5,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('vojkov.urls')),
-    path('flat/choise/', include('layouts.urls')),
+    path('choise/', include('layouts.urls')),
     path('admin/', admin.site.urls),
+    path('', include('vojkov.urls')),
+    
+    
     path('ckeditor/', include('ckeditor_uploader.urls')),
   
 ]

@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('dokumentatsiya/', views.dok, name='dok'),
-    path('page/<slug:slug>/', views.page, name='page'),
+    path('<slug:slug>/', views.page, name='page'),
     
 ]

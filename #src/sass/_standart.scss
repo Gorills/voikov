@@ -2,6 +2,11 @@
     padding: 20px 0;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: 1810px) {
+        overflow-x: scroll;
+    }
     // .standart__inner
 
     &__inner {
@@ -11,6 +16,10 @@
 
     &__bg {
         width: 100%;
+        min-width: 1881px;
+        max-width: 1881px;
+        display: block;
+        margin: 0 auto;
     }
     // .standart__map
 
@@ -22,5 +31,151 @@
             width: 100%;
         }
 
+    }
+
+    // .standart__wrap
+
+    &__wrap {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .home-one {
+        position: absolute;
+        background-color: $primary;
+        left: 214px;
+        top: 88px;
+        height: 360px;
+        width: 269px;
+        z-index: 80;
+        transition: all .5s ease;
+        transform: rotate(-3deg);
+        opacity: 0;
+       
+        clip-path: polygon(18% 0,100% 5%,105% 93%,81% 100%,0 93%,0 3%);
+        &:hover {
+            opacity: 50%;
+        }
+    }
+    
+    .home-two {
+        position: absolute;
+        background-color: $primary;
+        opacity: 0;
+        transition: all .5s ease;
+        left: 242px;
+        top: 51px;
+        height: 49px;
+        width: 163px;
+        z-index: 80;
+       
+        clip-path: polygon(35% 6%,98% 4%,100% 100%,81% 100%,2% 94%,0% 57%);
+    
+        &:hover {
+            opacity: 50%;
+        }
+
+    
+    } 
+
+    .home-three {
+        position: absolute;
+        background-color: $primary;
+        opacity: 0;
+        transition: all .5s ease;
+        
+        left: 487px;
+        top: 122px;
+        height: 404px;
+        width: 251px;
+        z-index: 80;
+        clip-path: polygon(33% 1%,99% 8%,100% 96%,71% 100%,4% 87%,0% 3%);
+        &:hover {
+            opacity: 50%;
+        }
+    }
+
+    .home-four {
+        position: absolute;
+        background-color: $primary;
+        transition: all .5s ease;
+        opacity: 0;
+        left: 497px;
+        top: 58px;
+        height: 100px;
+        width: 242px;
+        
+        clip-path: polygon(14% 0%,102% 8%,100% 97%,30% 68%,0 77%,0 11%);
+        &:hover {
+            opacity: 50%;
+        }
+    }
+    .home-five {
+        position: absolute;
+        background-color: $primary;
+        transition: all .5s ease;
+        opacity: 0;
+        left: 733px;
+        top: 92px;
+        height: 372px;
+        width: 264px;
+        
+        clip-path: polygon(13% 0%,100% 3%,100% 21%,91% 22%,77% 34%,76% 95%,1% 89%,0% 4%);        
+        &:hover {
+            opacity: 50%;
+        }
+
+        
+    }
+    .home-six {
+        position: absolute;
+        background-color: $primary;
+        transition: all .5s ease;
+        opacity: 0;
+        left: 934px;
+        top: 173px;
+        height: 451px;
+        width: 154px;
+        
+        clip-path: polygon(24% 0%,100% 0%,100% 86%,86% 100%,0% 100%,0 11%);
+        &:hover {
+            opacity: 50%;
+        }
+    }
+
+    .home-seven {
+        position: absolute;
+        background-color: $primary;
+        transition: all .5s ease;
+        opacity: 0;
+        left: 1033px;
+        left: 1031px;
+        top: 138px;
+        height: 381px;
+        width: 294px;
+        -webkit-clip-path: polygon(100% 0,100% 40%,68% 35%,51% 42%,52% 100%,41% 100%,39% 27%,0 26%,0 13%,6% 0);
+        clip-path: polygon(100% 3%,100% 32%,67% 25%,31% 28%,29% 100%,18% 100%,20% 10%,0% 9%,0 4%,10% 0%);
+        &:hover {
+            opacity: 50%;
+        }
+    
+    }
+
+    .home-eight {
+        position: absolute;
+        background-color: $primary;
+        transition: all .5s ease;
+        opacity: 0;
+        
+        
+        left: 1116px;
+        top: 230px;
+        height: 542px;
+        width: 310px;
+        clip-path: polygon(39% 0%,100% 10%,96% 93%,60% 97%,0% 79%,2% 2%);
+         
+        &:hover {
+            opacity: 50%;
+        }
     }
 }
