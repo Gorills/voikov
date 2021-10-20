@@ -16,7 +16,7 @@
 
 {% block body %}
 {% load static %}
-
+{% load thumbnail %}
 
 <div class="slide">
     <div class="container">
@@ -124,7 +124,7 @@
 
 
 
-<div class="block" id ="block1">
+<div class="block">
 
                 
     
@@ -135,27 +135,19 @@
                 <div class="sidebar">
 
                     <ul class="sidebar__list">
-                        <li class="sidebar__item"><a href="#block1" class="sidebar__link">Район</a></li>
-                        <li class="sidebar__item"><a href="#block2" class="sidebar__link">Район</a></li>
-                        <li class="sidebar__item"><a href="#block3" class="sidebar__link">Район</a></li>
+
+                    {% for block in blocks %}
+                    
+                        <li class="sidebar__item"><a href="#block{{ forloop.counter }}" class="sidebar__link">{{ block.title }}</a></li>
+                    {% endfor %}
+                        
                         
                     </ul>
                 
                 
                 </div>
 
-                <div class="block__content">
-                    <div class="block__content-wrap">
-                        <h2 class="block__title">Район</h2>
-                        <p class="block__subtitle">Развитый район города</p>
-
-                        <p class="block__text">Квартал «Резиденция» расположен на тихой территории рядом с крупными городскими магистралями, в Центральном районе на пересечении улиц Мяготина и Савельева. Рядом находится остановка общественного транспорта, с которой можно добраться до центра города. В районе уже сформирована инфраструктура: в пешей доступности — гимназия, школа, четыре детских сада, поликлиники, центральный стадион, Курганский государственный университет, сквер. На первых этажах новых домов предусмотрены повседневные сервисы для жителей: магазины, кафе, аптеки и другие.</p>
-                    </div>
-
-                    <img src="{% static 'images/grid.jpg' %}" alt="" class="block__img">
-
                 
-                </div>
             
             </div>
             
@@ -163,10 +155,95 @@
     </div>
 </div>
 
-<div class="block block--gray" id="block2">
+{% for block in blocks %}
+
+<div class="block" id ="block{{ forloop.counter }}">
+
+    {% if block.solo %}
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+               <div class="block__content">
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">{{block.title}}</h2>
+                        <p class="block__subtitle">{{block.desc}}</p>
+
+                        <p class="block__text">
+                        {{block.text}}
+                        </p>
+                    </div>
+
+                    {% for image in block.images.all %}
+                        
+                        {% thumbnail image.image "388x320" crop="center" as im %}
+                              
+                            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="" class="block__img">
+                            
+                            
+                        {% endthumbnail %}
+                    {% endfor %}
+                    
 
                 
+                </div> 
+            </div>
+            
+        </div>
+    </div>
     
+    {% elif block.grid %}
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+                <div class="block__content">
+
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">{{block.title}}</h2>
+                        <p class="block__subtitle">{{block.desc}}</p>
+
+                        <p class="block__text">
+                        {{block.text}}
+                        </p>
+                    </div>
+
+                    
+                
+                </div>
+
+                <div class="block__grid">
+
+                    {% for image in block.images.all %}
+                        
+                        <div class="block__item">
+                            {% thumbnail image.image "631x300" crop="center" as im %}
+                              
+                                
+                                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"  alt="" class="block__item-img">
+                            
+                            {% endthumbnail %}
+                            
+
+                        </div>
+                    {% endfor %}
+                    
+                    
+                    
+                    
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    </div>
+    
+    {% elif block.slider %}
     <div class="block__inner">
         <div class="container">
 
@@ -175,12 +252,13 @@
 
                 <div class="block__content">
                     <div class="block__content-wrap">
-                        <h2 class="block__title">Район</h2>
-                        <p class="block__subtitle">Развитый район города</p>
+                        <h2 class="block__title">{{block.title}}</h2>
+                        <p class="block__subtitle">{{block.desc}}</p>
 
-                        <p class="block__text">Квартал «Резиденция» расположен на тихой территории рядом с крупными городскими магистралями, в Центральном районе на пересечении улиц Мяготина и Савельева. Рядом находится остановка общественного транспорта, с которой можно добраться до центра города. В районе уже сформирована инфраструктура: в пешей доступности — гимназия, школа, четыре детских сада, поликлиники, центральный стадион, Курганский государственный университет, сквер. На первых этажах новых домов предусмотрены повседневные сервисы для жителей: магазины, кафе, аптеки и другие.</p>
+                        <p class="block__text">
+                        {{block.text}}
+                        </p>
                     </div>
-
                    
 
                 
@@ -190,34 +268,18 @@
 
                     <div class="block__slider">
 
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/1.jpg' %}" alt="" class="block__slide-img">
+                        {% for image in block.images.all %}
+                            <div class="block__slide">
+                                
+                                {% thumbnail image.image "1000x514" crop="center" as im %}
+                              
+                                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="" class="block__slide-img">
+                                {% endthumbnail %}
+                            
+                            </div>
+                        {% endfor %}
+
                         
-                        </div>
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/2.jpg' %}" alt="" class="block__slide-img">
-                        
-                        </div>
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/3.jpg' %}" alt="" class="block__slide-img">
-                        
-                        </div>
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/4.jpg' %}" alt="" class="block__slide-img">
-                        
-                        </div>
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/5.jpg' %}" alt="" class="block__slide-img">
-                        
-                        </div>
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/6.jpg' %}" alt="" class="block__slide-img">
-                        
-                        </div>
-                        <div class="block__slide">
-                            <img src="{% static 'images/block/6.jpg' %}" alt="" class="block__slide-img">
-                        
-                        </div>
 
 
 
@@ -227,13 +289,17 @@
                     
 
                     <div class="block__slider-nav">
-                        <img src="{% static 'images/block/1.jpg' %}" alt="">
-                        <img src="{% static 'images/block/2.jpg' %}" alt="">
-                        <img src="{% static 'images/block/3.jpg' %}" alt="">
-                        <img src="{% static 'images/block/4.jpg' %}" alt="">
-                        <img src="{% static 'images/block/5.jpg' %}" alt="">
-                        <img src="{% static 'images/block/6.jpg' %}" alt="">
-                        <img src="{% static 'images/block/6.jpg' %}" alt="">
+                        {% for image in block.images.all %}
+                           
+                            {% thumbnail image.image "163x100" crop="center" as im %}
+                                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="">
+                            {% endthumbnail %}
+                                
+                            
+                            
+                        {% endfor %}
+                        
+
 
 
                     
@@ -248,68 +314,25 @@
             
         </div>
     </div>
-</div>
 
-
-<div class="block" id="block3">
-
-                
     
-    <div class="block__inner">
-        <div class="container">
-
-            <div class="block__wrap">
-                
-
-                <div class="block__content">
-
-                    <div class="block__content-wrap">
-                        <h2 class="block__title">Район</h2>
-                        <p class="block__subtitle">Развитый район города</p>
-
-                        <p class="block__text">Квартал «Резиденция» расположен на тихой территории рядом с крупными городскими магистралями, в Центральном районе на пересечении улиц Мяготина и Савельева. Рядом находится остановка общественного транспорта, с которой можно добраться до центра города. В районе уже сформирована инфраструктура: в пешей доступности — гимназия, школа, четыре детских сада, поликлиники, центральный стадион, Курганский государственный университет, сквер. На первых этажах новых домов предусмотрены повседневные сервисы для жителей: магазины, кафе, аптеки и другие.</p>
-                    </div>
-
-                    
-                
-                </div>
-
-                <div class="block__grid">
-                    <div class="block__item">
-                        <img src="{% static 'images/block/1.jpg' %}" alt="" class="block__item-img">
-
-                    </div>
-                    <div class="block__item">
-                        <img src="{% static 'images/block/2.jpg' %}" alt="" class="block__item-img">
-
-                    </div>
-                    <div class="block__item">
-                        <img src="{% static 'images/block/3.jpg' %}" alt="" class="block__item-img">
-
-                    </div>
-                    <div class="block__item">
-                        <img src="{% static 'images/block/4.jpg' %}" alt="" class="block__item-img">
-
-                    </div>
-                    
-                    
-                
-                </div>
-            
-            </div>
-            
-        </div>
-    </div>
+    {% endif %}
+    
+    
 </div>
+
+{% endfor %}
+
+
 
 
 <div class="benefits">
     <div class="container">
         <div class="benefits__inner">
             <h2 class="title">Преимущества квартир</h2>
-
             <div class="benefits__row">
                 <div class="benefits__item">
+                    
                     <img src="{% static 'images/benefits.jpg' %}" alt="" class="benefits__img">
                     <p class="benefits__title">Двухуровневые квартиры</p>
                 </div>

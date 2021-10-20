@@ -74,3 +74,32 @@ class PageBlock(models.Model):
         
         verbose_name = 'Блок'
         verbose_name_plural = 'Блоки'
+
+
+
+class HomeBlock(models.Model):
+    title = models.CharField(max_length=250, verbose_name='Навание')
+    desc = models.CharField(max_length=300, verbose_name='Короткое описание')
+    text = models.TextField(verbose_name='Полное описание')
+    slider = models.BooleanField(verbose_name='Слайдер')
+    solo = models.BooleanField(verbose_name='Одна картинка')
+    grid = models.BooleanField(verbose_name='Сетка 4 фото')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        
+        verbose_name = 'Блок на главной'
+        verbose_name_plural = 'Блоки на главной'
+
+
+class HomeBlockImages(models.Model):
+    parent = models.ForeignKey(HomeBlock, related_name='images', verbose_name='Блок', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/block')
+
+
+    class Meta:
+        
+        verbose_name = 'Картинка'
+        verbose_name_plural = 'Картинки'

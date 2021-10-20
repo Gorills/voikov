@@ -1,11 +1,17 @@
 from django.shortcuts import render
 
 
-from .models import DocCat, Page
+from .models import DocCat, Page, HomeBlock
 # Create your views here.
 def home(request):
 
-    return render(request, 'vojkov/home.html')
+    context = {
+        'blocks': HomeBlock.objects.all(),
+        
+    }
+
+
+    return render(request, 'vojkov/home.html', context)
 
 
 def dok(request):

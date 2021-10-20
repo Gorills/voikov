@@ -51,9 +51,6 @@ jQuery(document).ready(function($) {
 
 
 
-
-
-
 $(document).ready(function(){
   var heights = [];  
 
@@ -78,17 +75,12 @@ $(document).ready(function(){
       var sidebar = $('.sidebar').height();
       var delayTop = header + slide + nav + grid;
       
-      
-     
       var scrolls = $(window).scrollTop();
       
       var start = scrolls - delayTop;
-      var stop = result + delayTop ;
+      var stop = result + delayTop + 400 ;
       
     
-      
-
-      
       
       if(start >= 0 && scrolls < stop - sidebar){
           

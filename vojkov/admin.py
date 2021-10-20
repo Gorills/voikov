@@ -1,8 +1,9 @@
 from django.contrib import admin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
+from django.db import models
 
-from .models import Doc, DocCat, Page, PageBlock
+from .models import Doc, DocCat, Page, PageBlock, HomeBlock, HomeBlockImages
 # Register your models here.
 
 
@@ -46,3 +47,18 @@ class PageAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Page, PageAdmin)
+
+
+
+class HomeImagesAdmin(admin.TabularInline):
+    model = HomeBlockImages
+    extra = 0
+    min_num = 0
+
+class HomeBlockAdmin(admin.ModelAdmin):
+
+    inlines = [
+        HomeImagesAdmin,
+    ]
+
+admin.site.register(HomeBlock, HomeBlockAdmin)

@@ -6,6 +6,8 @@
     &--fixed {
         position: fixed;
         top: 52px;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
         z-index: 98;
     }
     // .nav__inner
