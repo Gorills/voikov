@@ -27,6 +27,9 @@
     &__link {
         color: #fff;
         display: block;
+        &:hover {
+            color: $primary;
+        }
     }
 
     // .footer__wrap
@@ -40,6 +43,9 @@
 
     &__social {
         color: #fff;
+        &:hover {
+            color: $primary;
+        }
     }
     &__social + &__social {
         margin-left: 20px;

@@ -43,16 +43,14 @@
     .home-one {
         position: absolute;
         background-color: $primary;
-        left: 214px;
-        top: 88px;
-        height: 360px;
-        width: 269px;
-        z-index: 80;
+        left: 210px;
+        top: 66px;
+        height: 411px;
+        width: 304px;
         transition: all .5s ease;
         transform: rotate(-3deg);
         opacity: 0;
-       
-        clip-path: polygon(18% 0,100% 5%,105% 93%,81% 100%,0 93%,0 3%);
+        clip-path: polygon(20% 0,100% 7%,98% 93%,80% 100%,0 90%,0 3%);
         &:hover {
             opacity: 50%;
         }
@@ -63,14 +61,12 @@
         background-color: $primary;
         opacity: 0;
         transition: all .5s ease;
-        left: 242px;
-        top: 51px;
-        height: 49px;
-        width: 163px;
+        left: 251px;
+        top: 6px;
+        height: 75px;
+        width: 191px;
         z-index: 80;
-       
-        clip-path: polygon(35% 6%,98% 4%,100% 100%,81% 100%,2% 94%,0% 57%);
-    
+        clip-path: polygon(49% 9%,98% 10%,100% 100%,100% 101%,1% 88%,0% 59%);
         &:hover {
             opacity: 50%;
         }
@@ -83,13 +79,15 @@
         background-color: $primary;
         opacity: 0;
         transition: all .5s ease;
-        
-        left: 487px;
-        top: 122px;
-        height: 404px;
-        width: 251px;
+        left: 507px;
+        top: 113px;
+        height: 480px;
+        width: 281px;
         z-index: 80;
-        clip-path: polygon(33% 1%,99% 8%,100% 96%,71% 100%,4% 87%,0% 3%);
+        -webkit-clip-path: polygon(33% 1%,99% 8%,100% 96%,71% 100%,4% 87%,0 3%);
+        clip-path: polygon(36% 1%,100% 10%,100% 95%,67% 100%,4% 83%,0 3%);
+        
+        
         &:hover {
             opacity: 50%;
         }
@@ -100,12 +98,12 @@
         background-color: $primary;
         transition: all .5s ease;
         opacity: 0;
-        left: 497px;
-        top: 58px;
-        height: 100px;
-        width: 242px;
+        left: 542px;
+        top: 17px;
+        height: 160px;
+        width: 279px;
+        clip-path: polygon(17% 0,100% 11%,100% 42%,93% 47%,93% 92%,22% 63%,1% 69%,0 10%);
         
-        clip-path: polygon(14% 0%,102% 8%,100% 97%,30% 68%,0 77%,0 11%);
         &:hover {
             opacity: 50%;
         }
@@ -115,12 +113,11 @@
         background-color: $primary;
         transition: all .5s ease;
         opacity: 0;
-        left: 733px;
-        top: 92px;
-        height: 372px;
-        width: 264px;
-        
-        clip-path: polygon(13% 0%,100% 3%,100% 21%,91% 22%,77% 34%,76% 95%,1% 89%,0% 4%);        
+        left: 800px;
+        top: 77px;
+        height: 427px;
+        width: 308px;
+        clip-path: polygon(13% 0,100% 3%,100% 28%,82% 27%,64% 44%,64% 95%,1% 89%,0 4%);        
         &:hover {
             opacity: 50%;
         }
@@ -132,12 +129,12 @@
         background-color: $primary;
         transition: all .5s ease;
         opacity: 0;
-        left: 934px;
-        top: 173px;
-        height: 451px;
-        width: 154px;
-        
-        clip-path: polygon(24% 0%,100% 0%,100% 86%,86% 100%,0% 100%,0 11%);
+        left: 996px;
+        top: 194px;
+        height: 534px;
+        width: 188px;
+        -webkit-clip-path: polygon(24% 0,100% 0,100% 86%,86% 100%,0 100%,0 11%);
+        clip-path: polygon(31% 0,100% 1%,100% 18%,87% 100%,0 100%,0 13%);
         &:hover {
             opacity: 50%;
         }
@@ -148,13 +145,11 @@
         background-color: $primary;
         transition: all .5s ease;
         opacity: 0;
-        left: 1033px;
-        left: 1031px;
+        left: 1133px;
         top: 138px;
-        height: 381px;
-        width: 294px;
-        -webkit-clip-path: polygon(100% 0,100% 40%,68% 35%,51% 42%,52% 100%,41% 100%,39% 27%,0 26%,0 13%,6% 0);
-        clip-path: polygon(100% 3%,100% 32%,67% 25%,31% 28%,29% 100%,18% 100%,20% 10%,0% 9%,0 4%,10% 0%);
+        height: 195px;
+        width: 341px;
+        clip-path: polygon(100% 15%,100% 99%,66% 85%,41% 75%,31% 78%,15% 83%,15% 32%,0% 30%,0% 13%,11% 2%);
         &:hover {
             opacity: 50%;
         }
@@ -166,13 +161,12 @@
         background-color: $primary;
         transition: all .5s ease;
         opacity: 0;
-        
-        
-        left: 1116px;
-        top: 230px;
-        height: 542px;
-        width: 310px;
-        clip-path: polygon(39% 0%,100% 10%,96% 93%,60% 97%,0% 79%,2% 2%);
+        left: 1159px;
+        top: 283px;
+        height: 625px;
+        width: 401px;
+       
+        clip-path: polygon(29% 0,100% 11%,94% 92%,68% 98%,0 79%,2% 3%);
          
         &:hover {
             opacity: 50%;

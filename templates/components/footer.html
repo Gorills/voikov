@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer__inner">
             <div class="footer__col">
-                <p>© 2021 Компания Брусника</p>
+                <p>© 2021 Жилой комплекс <br> "Войков"</p>
             
             </div>
             <div class="footer__col">
@@ -10,6 +10,18 @@
                 <div class="footer__ob">
                     <a href="#" class="footer__link">+7 (3522) 22-55-73</a>
                     <a href="#" class="footer__link">Юридическая информация</a>
+                </div>
+
+            
+            </div>
+            <div class="footer__col">
+                
+                <div class="footer__ob">
+                    {% for page in request.page_list %}
+                        {% if page.footer_menu %}
+                            <a href="{{ page.get_absolute_url }}" class="footer__link">{{ page.name }}</a>
+                        {% endif %}
+                    {% endfor %}
                 </div>
 
             
