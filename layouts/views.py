@@ -6,7 +6,8 @@ from .models import Layouts, Room
 def layouts(request):
 
     context = {
-        'layouts': Layouts.objects.all()
+        'layouts': Layouts.objects.all(),
+        
     }
 
     return render(request, 'layouts/layouts.html', context)

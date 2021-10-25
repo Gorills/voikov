@@ -49,10 +49,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sorl.thumbnail',
+    'snowpenguin.django.recaptcha3',
     'ckeditor',
     'ckeditor_uploader',
     'vojkov',
     'layouts',
+    'contacts',
 ]
 
 MIDDLEWARE = [

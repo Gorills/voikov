@@ -1,6 +1,7 @@
 {% load static %}
 {% load thumbnail %}
-
+{% load recaptcha3 %}
+{% load contact_tags %}
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -48,7 +49,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>    
     <link href="{% static 'css/style.css' %}?{% now 'H:i:s' %}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0af96d350a.js" crossorigin="anonymous"></script>
-
+    {% recaptcha_init %}
+    {% recaptcha_ready action_name='homepage' %}
     
 
 </head>
@@ -70,6 +72,42 @@
 </div>
     
 
+<div class="popup-call">
+    <div class="popup-call__closer"></div>
+
+    <div class="popup-call__inner">
+        <img src="{% static 'images/icons/alert-close.svg' %}" alt="" class="popup-call__close">
+        <p class="popup-call__title">Обратный звонок</p>
+
+       <form action="{% url 'callback' %}" class="popup-call__form" method="post">
+        {% if layout %}
+                <input type="text" hidden="hidden" name="page" value="{{ layout.name }}">
+
+            {% elif page %}
+
+                <input type="text" hidden="hidden" name="page" value="{{ page.name }}">
+
+            {% elif room %}
+                <input type="text" hidden="hidden" name="page" value="{{ room.name }}">
+            {% else %}
+                <input type="text" hidden="hidden" name="page" value="{{ request.get_full_path }}">
+            {% endif %}
+    
+         {% contact_form %}
+
+
+
+    
+        </form>
+       
+
+
+      
+           
+    
+    </div>
+
+</div>
 
     
 {% include 'components/footer.html' %}

@@ -42,6 +42,14 @@ jQuery(document).ready(function ($) {
     }
   });
 });
+$('.callback-show').click(function (e) {
+  e.preventDefault();
+  $('.popup-call').addClass('popup-call--active');
+});
+$('.popup-call__closer, .popup-call__close').click(function (e) {
+  e.preventDefault();
+  $('.popup-call').removeClass('popup-call--active');
+});
 $(document).ready(function () {
   var heights = [];
   $(".block").each(function (indx, element) {
