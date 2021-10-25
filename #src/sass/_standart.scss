@@ -4,9 +4,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    @media screen and (max-width: 1810px) {
-        overflow-x: scroll;
-    }
+    
     // .standart__inner
 
     &__inner {
@@ -171,5 +169,12 @@
         &:hover {
             opacity: 50%;
         }
+    }
+}
+
+
+#genplan {
+    @media screen and (max-width: 1810px) {
+        overflow-x: scroll;
     }
 }

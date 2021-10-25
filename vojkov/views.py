@@ -2,11 +2,13 @@ from django.shortcuts import render
 
 
 from .models import DocCat, Page, HomeBlock
+from layouts.models import Room
 # Create your views here.
 def home(request):
 
     context = {
         'blocks': HomeBlock.objects.all(),
+        'rooms': Room.objects.all()
         
     }
 

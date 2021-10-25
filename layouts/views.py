@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Layouts
+from .models import Layouts, Room
 # Create your views here.
 
 
@@ -19,3 +19,13 @@ def layouts_detail(request, slug):
     }
 
     return render(request, 'layouts/layouts_detail.html', context)
+
+
+
+def room(request, slug):
+
+    context = {
+        'room': Room.objects.get(slug=slug)
+    }
+
+    return render(request, 'layouts/room.html', context)

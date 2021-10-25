@@ -1,7 +1,8 @@
+from django import forms
 from django.contrib import admin
 from django.forms import ModelForm, FileField
 
-from .models import Layouts, Side, Home
+from .models import Layouts, Side, Home, Room
 # Register your models here.
 
 class HomeAdmin(admin.ModelAdmin):
@@ -9,6 +10,23 @@ class HomeAdmin(admin.ModelAdmin):
 
 admin.site.register(Home, HomeAdmin)
 
+
+class RoomAdminForm(ModelForm):
+    class Meta:
+        model = Room
+        exclude = []
+        field_classes = {
+            'image': FileField,
+            
+
+        }
+
+class RoomAdmin(admin.ModelAdmin):
+    form = RoomAdminForm
+    prepopulated_fields = {'slug': ('name',)}
+
+
+admin.site.register(Room, RoomAdmin)
 
 
 class SideModelForm(ModelForm):
