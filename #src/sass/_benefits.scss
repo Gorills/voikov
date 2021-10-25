@@ -7,6 +7,10 @@
     &__row {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 992px) {
+            flex-wrap: wrap;
+        }
     }
 
     // .benefits__item
@@ -16,6 +20,9 @@
         height: 406px;
         overflow: hidden;
         position: relative;
+        @media screen and (max-width: 992px) {
+            margin: 0 auto 20px;
+        }
         &::after {
             content: '';
             position: absolute;

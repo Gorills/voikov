@@ -9,7 +9,13 @@
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
         z-index: 98;
+        
     }
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+
+    
     // .nav__inner
 
     &__inner {

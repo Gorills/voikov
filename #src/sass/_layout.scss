@@ -1,6 +1,9 @@
 .layout {
     display: flex;
     border-top: 1px solid #e1e1e1;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
     
     // .layout__left
 
@@ -10,7 +13,9 @@
         max-width: 60%;
         padding-right: 20px;
         padding: 40px 0 40px 0;
-        
+        @media screen and (max-width: 1024px) {
+            max-width: 100%;
+        }
     }
 
     // .layout__wrap
@@ -68,6 +73,12 @@
         .slick-current {
             text-decoration: none;
         }
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 425px) {
+            width: 100%;
+        }
     }
 
     // .layout__nav-item
@@ -87,6 +98,9 @@
         max-width: 398px;
         padding: 40px 0 40px 20px;
         margin: 0 auto;
+        @media screen and (max-width: 1024px) {
+            max-width: 100%;
+        }
     }
 
     // .layout__column-wrap

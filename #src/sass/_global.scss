@@ -113,6 +113,9 @@ a   {
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
+    @media screen and (max-width: 425px) {
+        padding-top: 0;
+    }
 }
 
 .share {

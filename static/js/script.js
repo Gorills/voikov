@@ -29,6 +29,11 @@ $(".header__drop").mouseleave(function () {
   $(".menu-btn").removeClass('menu-btn_active');
   $(".header__drop").removeClass('header__drop--active');
 });
+$(".toggle-menu-2").click(function (e) {
+  e.preventDefault();
+  $(".menu-btn-2").toggleClass('menu-btn-2_active');
+  $(".header").toggleClass('header--active');
+});
 jQuery(document).ready(function ($) {
   var url = document.location.href;
   $.each($(".header__link"), function () {

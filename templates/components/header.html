@@ -1,4 +1,17 @@
 {% load static %}
+
+
+<div class="toggle-menu-2" id="menu-2">
+    <div class="toggle-section-2">
+        <a href="#" class="menu-btn-2">
+            <span></span>
+        </a>
+    </div>
+   
+</div>
+
+
+
 <header class="header">
 
     <div class="header__top">
@@ -72,6 +85,7 @@
                 <p class="header__drop-title">Покупателям</p>
 
                 <ul class="header__drop-list">
+                <li class="header__drop-item"><a href="{% url 'layouts' %}" class="header__drop-link">Квартиры</a></li>
                 {% for page in request.page_list %}
                     {% if page.drop_menu_left %}
                         <li class="header__drop-item"><a href="{{ page.get_absolute_url }}" class="header__drop-link">{{ page.name }}</a></li>
@@ -86,6 +100,7 @@
                 <p class="header__drop-title">Компания</p>
 
                 <ul class="header__drop-list">
+                
                 {% for page in request.page_list %}
                     {% if page.drop_menu_right %}
                         <li class="header__drop-item"><a href="{{ page.get_absolute_url }}" class="header__drop-link">{{ page.name }}</a></li>
@@ -94,7 +109,7 @@
                 {% endfor %}
                     
                     <li class="header__drop-item"><a href="{% url 'dok' %}" class="header__drop-link">Официальные документы</a></li>
-                    <li class="header__drop-item"><a href="" class="header__drop-link">Контакты</a></li>
+                    {% comment %} <li class="header__drop-item"><a href="" class="header__drop-link">Контакты</a></li> {% endcomment %}
                 </ul>
             </div>
         

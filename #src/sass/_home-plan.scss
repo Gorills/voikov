@@ -3,6 +3,9 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
     // .home-plan__item
 
     &__item {
@@ -11,6 +14,9 @@
         color: $font-dark;
         padding: 20px;
         border: 1px solid $hover;
+        @media screen and (max-width: 768px) {
+            margin: 0 auto 20px;
+        }
     }
 
     // .home-plan__img

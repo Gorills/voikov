@@ -27,8 +27,14 @@
         padding-top: 20px;
         margin-bottom: 14px;
         margin-right: 14px;
+        @media screen and (max-width: 1210px) {
+            margin: 0 auto 20px;
+        }
         &:nth-child(4n) {
             margin-right: 0;
+            @media screen and (max-width: 1210px) {
+                margin: 0 auto 20px;
+            }
         }
 
         &:hover {

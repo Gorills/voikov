@@ -6,6 +6,28 @@
     top: 0;
     border-bottom: 1px solid #e1e1e1;
 
+
+    @media screen and (max-width: 425px) {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        width: 80%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        .toggle-menu {
+            display: none;
+        }
+
+        &--active {
+            left: 0;
+        }
+    }
+
     &--fixed {
         position: fixed;
 
@@ -23,6 +45,9 @@
         background-color: $blue;
         font-size: 16px;
         padding: 10px 0;
+        @media screen and (max-width: 425px) {
+            display: none;
+        }
 
     }
 
@@ -52,6 +77,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 425px) {
+            flex-direction: column;   
+        }
     }
 
     // .header__logo
@@ -59,13 +87,20 @@
     &__logo {
 
         img {
-            height: 25px!important;
+            height: 25px;
+            @media screen and (max-width: 425px) {
+                height: 60px; 
+                margin-bottom: 20px;
+            }
         }
     }
 
     // .header__nav
 
     &__nav {
+        @media screen and (max-width: 425px) {
+            display: none;
+        }
     }
 
     // .header__list
@@ -76,6 +111,9 @@
         margin: 0;
         display: flex;
         align-items: center;
+        @media screen and (max-width: 425px) {
+            flex-direction: column;
+        }
     }
 
     // .header__item
@@ -85,6 +123,10 @@
     }
     &__item + &__item {
         margin-left: 40px;
+        @media screen and (max-width: 425px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
     }
 
     // .header__link
@@ -126,6 +168,9 @@
     // .header__contacts
 
     &__contacts {
+        @media screen and (max-width: 425px) {
+            display: flex;
+        }
     }
 
     // .header__contacts-link
@@ -170,6 +215,15 @@
         &--active {
             display: flex;
         }
+        @media screen and (max-width: 425px) {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+            box-shadow: none;
+            border: none;
+            padding: 20px 0;
+        }
 
 
     }
@@ -188,6 +242,9 @@
         color: #9c9a9a;
         padding-bottom: 18px;
         border-bottom: 1px solid #e1e1e1;
+        @media screen and (max-width: 425px) {
+            display: none;
+        }
 
     }
 
