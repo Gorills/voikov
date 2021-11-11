@@ -61,17 +61,12 @@ $(document).ready(function () {
     result += val;
   });
   $(window).scroll(function () {
-    var header = $('.header').height();
-    var slide = $('.slide').height();
-    var nav = $('.nav').height();
-    var grid = $('.grid').height();
-    var sidebar = $('.sidebar').height();
-    var delayTop = header + slide + nav + grid;
+    var delayTop = $('#block1').offset().top;
     var scrolls = $(window).scrollTop();
-    var start = scrolls - delayTop;
-    var stop = result + delayTop + 400;
+    var start = scrolls - delayTop + 125;
+    var stop = result + delayTop;
 
-    if (start >= 0 && scrolls < stop - sidebar) {
+    if (start >= 0 && scrolls < stop) {
       $('.sidebar').css({
         "padding-top": start + "px"
       });
