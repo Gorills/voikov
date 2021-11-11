@@ -130,17 +130,17 @@ $(window).scroll(function(){
   var heighTree = $('#block3').height()
   var topBlockTree = blockTree + heighTree
 
-  // var blockFor = $('#block4').offset().top
-  // var heighFor = $('#block4').height()
-  // var topBlockFor = blockFor + heighFor
+  var blockFor = $('#block4').offset().top
+  var heighFor = $('#block4').height()
+  var topBlockFor = blockFor + heighFor
 
-  // var blockFive = $('#block5').offset().top
-  // var heighFive = $('#block5').height()
-  // var topBlockFive = blockFive + heighFive
+  var blockFive = $('#block5').offset().top
+  var heighFive = $('#block5').height()
+  var topBlockFive = blockFive + heighFive
 
-  // var blockSix = $('#block6').offset().top
-  // var heighSix = $('#block6').height()
-  // var topBlockSix = blockSix + heighSix
+  var blockSix = $('#block6').offset().top
+  var heighSix = $('#block6').height()
+  var topBlockSix = blockSix + heighSix
 
   var topScr = $(window).scrollTop() + 100;
   

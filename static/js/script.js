@@ -87,16 +87,16 @@ $(window).scroll(function () {
   var topBlockTwo = blockTwo + heighTwo;
   var blockTree = $('#block3').offset().top;
   var heighTree = $('#block3').height();
-  var topBlockTree = blockTree + heighTree; // var blockFor = $('#block4').offset().top
-  // var heighFor = $('#block4').height()
-  // var topBlockFor = blockFor + heighFor
-  // var blockFive = $('#block5').offset().top
-  // var heighFive = $('#block5').height()
-  // var topBlockFive = blockFive + heighFive
-  // var blockSix = $('#block6').offset().top
-  // var heighSix = $('#block6').height()
-  // var topBlockSix = blockSix + heighSix
-
+  var topBlockTree = blockTree + heighTree;
+  var blockFor = $('#block4').offset().top;
+  var heighFor = $('#block4').height();
+  var topBlockFor = blockFor + heighFor;
+  var blockFive = $('#block5').offset().top;
+  var heighFive = $('#block5').height();
+  var topBlockFive = blockFive + heighFive;
+  var blockSix = $('#block6').offset().top;
+  var heighSix = $('#block6').height();
+  var topBlockSix = blockSix + heighSix;
   var topScr = $(window).scrollTop() + 100;
 
   if (topScr >= blockOne && topScr <= topBlockOne) {
