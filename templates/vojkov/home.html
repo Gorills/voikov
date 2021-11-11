@@ -178,13 +178,14 @@
                     </div>
 
                     {% for image in block.images.all %}
-                        
+                        <a class="image-link" href="{{ image.image.url }}">
                         {% thumbnail image.image "388x320" crop="center" as im %}
-                              
+                        
                             <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="" class="block__img">
                             
                             
                         {% endthumbnail %}
+                        </a>
                     {% endfor %}
                     
 
@@ -221,7 +222,7 @@
 
                     {% for image in block.images.all %}
                         
-                        <div class="block__item">
+                        <a href={{image.image.url}} class="block__item">
                             {% thumbnail image.image "631x300" crop="center" as im %}
                               
                                 
@@ -230,7 +231,7 @@
                             {% endthumbnail %}
                             
 
-                        </div>
+                        </a>
                     {% endfor %}
                     
                     
@@ -268,14 +269,14 @@
                     <div class="block__slider">
 
                         {% for image in block.images.all %}
-                            <div class="block__slide">
+                            <a href="{{ image.image.url }}" class="block__slide">
                                 
                                 {% thumbnail image.image "1000x514" crop="center" as im %}
                               
                                     <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="" class="block__slide-img">
                                 {% endthumbnail %}
                             
-                            </div>
+                            </a>
                         {% endfor %}
 
                 

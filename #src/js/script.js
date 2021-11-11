@@ -249,3 +249,32 @@ $('.block__slider').slick({
     focusOnSelect: true,
     swipe: false,
   });
+
+
+
+  
+
+
+
+$('.block__slider').each(function() { // the containers for all your galleries
+    $(this).magnificPopup({
+        delegate: 'a', // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled:true
+        }
+    });
+});
+
+$('.block__grid').each(function() { // the containers for all your galleries
+  $(this).magnificPopup({
+      delegate: 'a', // the selector for gallery item
+      type: 'image',
+      gallery: {
+        enabled:true
+      }
+  });
+});
+
+$('.image-link').magnificPopup({type:'image'});
+
