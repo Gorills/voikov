@@ -2,6 +2,10 @@
     position: absolute;
     display: flex;
     align-items: flex-end;
+
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
     // .sidebar__list
 
     &__list {
