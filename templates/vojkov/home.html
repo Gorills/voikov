@@ -139,7 +139,7 @@
 
                     {% for block in blocks %}
                     
-                        <li class="sidebar__item"><a href="#block{{ forloop.counter }}" class="sidebar__link">{{ block.title }}</a></li>
+                        <li class="sidebar__item"><a id="link{{ forloop.counter }}" href="#block{{ forloop.counter }}" class="sidebar__link">{{ block.title }}</a></li>
                     {% endfor %}
                         
                         
@@ -261,8 +261,6 @@
                         </p>
                     </div>
                    
-
-                
                 </div>
 
                 <div class="block__slider-wrap">
@@ -280,14 +278,8 @@
                             </div>
                         {% endfor %}
 
-                        
-
-
-
                 
-                    </div>
-
-                    
+                    </div>      
 
                     <div class="block__slider-nav">
                         {% for image in block.images.all %}
@@ -299,18 +291,9 @@
                             
                             
                         {% endfor %}
-                        
-
-
-
-                    
-                    </div>
-
-
-                
+                    </div>               
                 </div>
 
-            
             </div>
             
         </div>

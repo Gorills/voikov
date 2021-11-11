@@ -78,6 +78,63 @@ $(document).ready(function () {
     }
   });
 });
+$(window).scroll(function () {
+  var blockOne = $('#block1').offset().top;
+  var heightOne = $('#block1').height();
+  var topBlockOne = heightOne + blockOne;
+  var blockTwo = $('#block2').offset().top;
+  var heighTwo = $('#block2').height();
+  var topBlockTwo = blockTwo + heighTwo;
+  var blockTree = $('#block3').offset().top;
+  var heighTree = $('#block3').height();
+  var topBlockTree = blockTree + heighTree; // var blockFor = $('#block4').offset().top
+  // var heighFor = $('#block4').height()
+  // var topBlockFor = blockFor + heighFor
+  // var blockFive = $('#block5').offset().top
+  // var heighFive = $('#block5').height()
+  // var topBlockFive = blockFive + heighFive
+  // var blockSix = $('#block6').offset().top
+  // var heighSix = $('#block6').height()
+  // var topBlockSix = blockSix + heighSix
+
+  var topScr = $(window).scrollTop() + 100;
+
+  if (topScr >= blockOne && topScr <= topBlockOne) {
+    $('#link1').addClass('sidebar__link--active');
+  } else {
+    $('#link1').removeClass('sidebar__link--active');
+  }
+
+  if (topScr >= blockTwo && topScr <= topBlockTwo) {
+    $('#link2').addClass('sidebar__link--active');
+  } else {
+    $('#link2').removeClass('sidebar__link--active');
+  }
+
+  if (topScr >= blockTree && topScr <= topBlockTree) {
+    $('#link3').addClass('sidebar__link--active');
+  } else {
+    $('#link3').removeClass('sidebar__link--active');
+  }
+
+  if (topScr >= blockFor && topScr <= topBlockFor) {
+    $('#link4').addClass('sidebar__link--active');
+  } else {
+    $('#link4').removeClass('sidebar__link--active');
+  }
+
+  if (topScr >= blockFive && topScr <= topBlockFive) {
+    $('#link5').addClass('sidebar__link--active');
+  } else {
+    $('#link5').removeClass('sidebar__link--active');
+  }
+
+  if (topScr >= blockSix && topScr <= topBlockSix) {
+    $('#link6').addClass('sidebar__link--active');
+  } else {
+    $('#link6').removeClass('sidebar__link--active');
+  }
+});
 $('.block__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
