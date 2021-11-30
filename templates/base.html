@@ -79,7 +79,16 @@
 
     <div class="popup-call__inner">
         <img src="{% static 'images/icons/alert-close.svg' %}" alt="" class="popup-call__close">
-        <p class="popup-call__title">Обратный звонок</p>
+        {% comment %} <p class="popup-call__title">Обратный звонок</p> {% endcomment %}
+
+
+        <script data-b24-form="inline/2/1gjvs7" data-skip-moving="true">
+            (function(w,d,u){
+            var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+            })(window,document,'https://cdn-ru.bitrix24.ru/b19627988/crm/form/loader_2.js');
+        </script>
+{% comment %}         
 
        <form action="{% url 'callback' %}" class="popup-call__form" method="post">
         {% if layout %}
@@ -99,7 +108,7 @@
 
 
 
-    
+     {% endcomment %}
         </form>
        
 
@@ -123,6 +132,11 @@
     <script src="{% static 'js/script.js' %}?{% now 'H:i:s' %}"></script>
   
    
- 
+    <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b19627988/crm/site_button/loader_2_1lqkbg.js');
+</script>
 </body>
 </html>
