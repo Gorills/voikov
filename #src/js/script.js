@@ -278,3 +278,6 @@ $('.block__grid').each(function() { // the containers for all your galleries
 
 $('.image-link').magnificPopup({type:'image'});
 
+
+
+$('.layout__img-link').magnificPopup({type:'image'});

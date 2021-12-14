@@ -198,3 +198,6 @@ $('.block__grid').each(function () {
 $('.image-link').magnificPopup({
   type: 'image'
 });
+$('.layout__img-link').magnificPopup({
+  type: 'image'
+});
