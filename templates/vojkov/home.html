@@ -1,17 +1,16 @@
 
 {% extends 'base.html' %}
 
-{% block title %}  {% endblock %}
+{% block title %} ЖК Войков | Официальный сайт застройщика {% endblock %}
 {% block description %} {% endblock %}
 {% block keywords %}  {% endblock %}
 {% block canonical %} {% endblock %}
-{% block og:title %}{% endblock %}
+{% block og:title %}ЖК Войков | Официальный сайт застройщика{% endblock %}
 {% block og:description %} {% endblock %}
 {% block og:url %}  {% endblock %}
-{% block twitter:title %}{% endblock %}
+{% block twitter:title %}ЖК Войков | Официальный сайт застройщика{% endblock %}
 {% block twitter:description %}{% endblock %}
-{% block vk:image %}{% endblock %}
-{% block og:image %}{% endblock %}
+
 
 
 {% block body %}
@@ -27,6 +26,8 @@
         </div>
     </div>
     <img src="{% static 'images/d11.jpg' %}" alt="" class="slide__bg">
+    <img src="{% static 'images/sun.png' %}" alt="" class="slide__sun">
+
 </div>
 
 {% comment %} <div class="nav">
@@ -383,10 +384,12 @@
     </div>
 
     <div class="standart__map">
-        <a class="dg-widget-link" href="http://2gis.ru/tomsk/firm/70000001020919359/center/84.93813514709473,56.50818767711524/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Томска</a><div class="dg-widget-link"><a href="http://2gis.ru/tomsk/firm/70000001020919359/photos/70000001020919359/center/84.93813514709473,56.50818767711524/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.ru/tomsk/center/84.938167,56.507035/zoom/16/routeTab/rsType/bus/to/84.938167,56.507035╎Ярче!, сеть супермаркетов?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Ярче!, сеть супермаркетов</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":840,"height":400,"borderColor":"#a3a3a3","pos":{"lat":56.50818767711524,"lon":84.93813514709473,"zoom":16},"opt":{"city":"tomsk"},"org":[{"id":"70000001020919359"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acff820cbf6fbb28f5ca188143176ab3100c840bf8d498f040aa753665f0a3f80&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>    
+
     </div>
-    
 </div>
+
+
 
 <div class="standart">
     <div class="container">
@@ -396,25 +399,27 @@
             <div class="pay">
 
 
-                <a href="#" class="pay__item">
+                <div class="pay__item">
                     <p class="pay__title">Ипотека</p>
-                    <p class="pay__text">Рассчитайте ежемесячный платёж и проконсультируйтесь с нашим специалистом. 90% заявок, оформленных в офисе Брусники, получают одобрение.</p>
+                    <p class="pay__text">Наши дома аккредитованы во всех ведущих банках, подберём оптимальное решение с минимальной ставкой от 4,75% на сегодняшний день. Не хотите копить на первоначальный взнос, а приобрести новую квартиру прямо сейчас - не проблема! Различные виды субсидированных ипотечных программ, работаем со всеми видами государственных сертификатов.</p>
                     
                     <img src="{% static 'images/footer-bg.svg' %}" alt="" class="pay__bg">
 
-                </a>
-                <a href="#" class="pay__item">
+                </div>
+                <div class="pay__item">
                     <p class="pay__title">Обмен</p>
-                    <p class="pay__text">Компания купит вашу квартиру, даже если она в ипотеке. Квартира оценивается по средней рыночной стоимости. Полученные деньги пойдут на покупку новой от Брусники.</p>
+                    <p class="pay__text">Мы ценим и уважаем своих клиентов, поэтому предлагаем самые разные и доступные способы приобретения квартиры. Вы избавляетесь от старой квартиры и хлопот, связанных с её реализацией, и получаете новую в любом из новых домом ЖК "Войков" по вашему выбору.
+
+                    </p>
                     <img src="{% static 'images/footer-bg.svg' %}" alt="" class="pay__bg">
 
-                </a>
-                <a href="#" class="pay__item">
+                </div>
+                <div class="pay__item">
                     <p class="pay__title">Наличный расчет</p>
-                    <p class="pay__text">Компания купит вашу квартиру, даже если она в ипотеке. Квартира оценивается по средней рыночной стоимости. Полученные деньги пойдут на покупку новой от Брусники.</p>
+                    <p class="pay__text">Мы следим за новыми сервисами, которые экономят время и деньги для наших клиентов и активно их применяем. Вы сможете приобрести новую квартиру в любом из домом ЖК "Войков" по вашему выбору в кратчайшие сроки и удобным для вас способом.</p>
                     <img src="{% static 'images/footer-bg.svg' %}" alt="" class="pay__bg">
 
-                </a>
+                </div>
             
             </div>
         </div>
