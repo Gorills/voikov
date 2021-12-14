@@ -3,6 +3,9 @@
     padding-top: 32px;
     margin-top: 220px;
     margin-bottom: 0;
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+    }
     // .breadcrumbs__list
 
     &__list {
