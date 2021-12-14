@@ -71,7 +71,7 @@ a   {
 .title {
     font-size: 28px;
     line-height: 34px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 46px;
     text-transform: uppercase;
@@ -81,6 +81,10 @@ a   {
     }
 }
 
+.sibtitle {
+    text-align: center;
+    margin-bottom: 60px;
+}
 
 .btn {
     display: -webkit-box;
