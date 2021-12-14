@@ -5,7 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('choise/', include('layouts.urls')),
+    path('apartments/', include('layouts.urls')),
     path('admin/', admin.site.urls),
     path('calback/', include('contacts.urls')),
     
