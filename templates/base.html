@@ -88,28 +88,30 @@
             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
             })(window,document,'https://cdn-ru.bitrix24.ru/b19627988/crm/form/loader_2.js');
         </script>
-{% comment %}         
+        
+        {% comment %}         
 
-       <form action="{% url 'callback' %}" class="popup-call__form" method="post">
-        {% if layout %}
-                <input type="text" hidden="hidden" name="page" value="{{ layout.name }}">
+        <form action="{% url 'callback' %}" class="popup-call__form" method="post">
+            {% if layout %}
+                    <input type="text" hidden="hidden" name="page" value="{{ layout.name }}">
 
-            {% elif page %}
+                {% elif page %}
 
-                <input type="text" hidden="hidden" name="page" value="{{ page.name }}">
+                    <input type="text" hidden="hidden" name="page" value="{{ page.name }}">
 
-            {% elif room %}
-                <input type="text" hidden="hidden" name="page" value="{{ room.name }}">
-            {% else %}
-                <input type="text" hidden="hidden" name="page" value="{{ request.get_full_path }}">
-            {% endif %}
-    
-         {% contact_form %}
+                {% elif room %}
+                    <input type="text" hidden="hidden" name="page" value="{{ room.name }}">
+                {% else %}
+                    <input type="text" hidden="hidden" name="page" value="{{ request.get_full_path }}">
+                {% endif %}
+        
+            {% contact_form %}
 
 
 
-     {% endcomment %}
-        </form>
+        
+            </form>
+        {% endcomment %}
        
 
 

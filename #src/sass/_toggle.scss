@@ -9,13 +9,13 @@
     line-height: 1;
     
     height: 30px;
-    border: 1px solid #e1e1e1;
+    
     cursor: pointer;
     font-size: 14px;
     padding: 0 13px 0 10px;
     transition: all .5s ease;
     &:hover {
-        border: 1px solid #929292;
+       
     }
         
 }
@@ -32,8 +32,8 @@
 .menu-btn {
     display: flex;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     position: relative;
     
@@ -47,10 +47,10 @@
     top: 50%;
     margin-top: -1px;
     left: 50%;
-    margin-left: -10px;
-    width: 20px;
-    height: 1px;
-    background-color: #333 ;
+    margin-left: -8px;
+    width: 16px;
+    height: 2px;
+    background-color: #fff ;
 }
 .menu-btn span::before,
 .menu-btn span::after {

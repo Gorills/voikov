@@ -1,41 +1,30 @@
-<footer class="footer">
+{% load static %}
+  <footer class="footer">
     <div class="container">
-        <div class="footer__inner">
-            <div class="footer__col">
-                <p>© 2021 Жилой комплекс <br> "Войков"</p>
-            
-            </div>
-            <div class="footer__col">
-                
-                <div class="footer__ob">
-                    <a href="#" class="footer__link">+7 (3522) 22-55-73</a>
-                    <a href="#" class="footer__link">Юридическая информация</a>
-                </div>
-
-            
-            </div>
-            <div class="footer__col">
-                
-                <div class="footer__ob">
-                    {% for page in request.page_list %}
-                        {% if page.footer_menu %}
-                            <a href="{{ page.get_absolute_url }}" class="footer__link">{{ page.name }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-
-            
-            </div>
-            <div class="footer__col">
-                <div class="footer__wrap">
-                    <a href="#" class="footer__social"><i class="fab fa-vk"></i></a>
-                    <a href="#" class="footer__social"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="footer__social"><i class="fab fa-whatsapp"></i></a>
-                
-                </div>
-            </div>
-        
-        
+      <div class="footer__inner">
+        <div class="footer__col">
+          <p class="footer__title">Документация</p>
+          <a target="_blank" href="https://xn--80az8a.xn--d1aqf.xn--p1ai/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BA/%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82/43645" class="footer__link"><img src="{% static 'images/icon.png' %}" alt=""> О застройщике</a>
+          <a target="_blank" href="{% static 'files/1.pdf' %}" class="footer__link"><img src="{% static 'images/icon.png' %}" alt=""> Разрешение на строительство</a>
+          <a target="_blank" href="{% static 'files/2.pdf' %}" class="footer__link"><img src="{% static 'images/icon.png' %}" alt=""> Экспертиза </a>
         </div>
+        <div class="footer__col">
+          <p class="footer__title">Контакты</p>
+          <p class="footer__org">ООО СЗ "ВИРА"</p>
+          <a href="tel:83833239704" class="footer__tel">+7 (3833) 239 704</a>
+          <a href="mailto:kupi@voikov.com" class="footer__mail">kupi@voikov.com</a>
+        </div>
+        
+        <div class="footer__col">
+          <a href="https://instagram.com/voikov_tomsk?utm_medium=copy_link">
+            <img src="{% static 'images/qr.svg' %}" alt="" class="footer__qr">
+
+          </a>
+          
+        </div>
+        
+      </div>
+
     </div>
-</footer>
+    <img src="{% static 'images/footer-bg.svg' %}" alt="" class="footer__bg">
+  </footer>

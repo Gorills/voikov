@@ -3,7 +3,7 @@
     margin: 0 auto;
     z-index: 99;
     position: absolute;
-    top: 0;
+    top: 100px;
     border-bottom: 1px solid #e1e1e1;
 
 
@@ -29,15 +29,14 @@
     }
 
     &--fixed {
-        position: fixed;
+        // position: fixed;
 
-        .header__top {
-            display: none;
-        }
+        
     }
     // .header__top
 
     &__top {
+        display: none;
         width: 100%;
         margin: 0 auto;
         text-align: center;
@@ -69,11 +68,31 @@
         padding: 10px 0;
         position: relative;
         background-color: #fff;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+        color: #fff;
+        line-height: 1;
+    }
+
+    // .header__bottom-bg
+
+    &__bottom-bg {
+        position: absolute;
+        width: 100%;
+        height: 101%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
     }
 
     // .header__inner
 
     &__inner {
+        position: relative;
+        z-index: 2;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -87,11 +106,8 @@
     &__logo {
 
         img {
-            height: 25px;
-            @media screen and (max-width: 425px) {
-                height: 60px; 
-                margin-bottom: 20px;
-            }
+            height: 178px;
+            
         }
     }
 
@@ -132,7 +148,7 @@
     // .header__link
 
     &__link {
-        color: $font-dark;
+        color: #fff;
         font-size: 16px;
         position: relative;
         &::after {
@@ -176,7 +192,7 @@
     // .header__contacts-link
 
     &__contacts-link {
-        color: $font-dark;
+        color: #fff;
         font-weight: 500;
         margin-right: 20px;
         
@@ -185,7 +201,7 @@
     // .header__social
 
     &__social {
-        color: $blue;
+        color: #fff;
         &:hover {
             color: $primary;
         }

@@ -23,13 +23,13 @@
         <div class="slide__inner">
         
         
-            <h1 class="slide__title">Жилой комплекс "Войков"</h1>
+            {% comment %} <h1 class="slide__title">Жилой комплекс "Войков"</h1> {% endcomment %}
         </div>
     </div>
-    <img src="{% static 'images/slide.jpg' %}" alt="" class="slide__bg">
+    <img src="{% static 'images/d11.jpg' %}" alt="" class="slide__bg">
 </div>
 
-<div class="nav">
+{% comment %} <div class="nav">
     <div class="container">
         <div class="nav__inner">
             <ul class="nav__list">
@@ -47,9 +47,9 @@
             <a href="{% url 'layouts' %}" class="btn">Выбрать квартиру</a>
         </div>
     </div>
-</div>
+</div> {% endcomment %}
 
-
+{% comment %} 
 <div class="grid">
     <div class="container">
         <div class="grid__inner">
@@ -122,7 +122,7 @@
         </div>
     </div>
 </div>
-
+ {% endcomment %}
 
 
 <div class="block">
@@ -310,11 +310,11 @@
 
 
 
-
+{% comment %} 
 <div class="benefits" id="benefits">
     <div class="container">
         <div class="benefits__inner">
-            <h2 class="title">Преимущества квартир</h2>
+            <h2 class="title"><span>Преимущества</span> квартир</h2>
             <div class="benefits__row">
                 <div class="benefits__item">
                     
@@ -333,9 +333,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> {% endcomment %}
 
-
+{% comment %} 
 <div class="standart" id="genplan">
     <div class="container">
         <div class="standart__inner">
@@ -368,14 +368,14 @@
     
 
 
-</div>
+</div> {% endcomment %}
 
 
 <div class="standart">
     <div class="container">
         <div class="standart__inner">
 
-        <h2 class="title">Инфраструктура района</h2>
+        <h2 class="title"><span>Инфраструктура</span> района</h2>
         
         
         </div>
@@ -390,7 +390,7 @@
 <div class="standart">
     <div class="container">
         <div class="standart__inner">
-            <h2 class="title">Способы покупки</h2>
+            <h2 class="title"><span>Способы</span> покупки</h2>
 
             <div class="pay">
 
@@ -412,10 +412,10 @@
         </div>
     </div>
 </div>
-<div class="standart">
+{% comment %} <div class="standart">
     <div class="container">
         <div class="standart__inner">
-            <h2 class="title">Планировочные решения</h2>
+            <h2 class="title"><span>Планировочные</span> решения</h2>
             
             <div class="home-plan">
             {% for room in rooms %}
@@ -435,7 +435,7 @@
             
         </div>
     </div>
-</div>
+</div> {% endcomment %}
 
 {% comment %} 
 <div class="video">
@@ -450,7 +450,7 @@
 </div> {% endcomment %}
 
 
-{% include 'parts/callback.html' %}
+{% comment %} {% include 'parts/callback.html' %} {% endcomment %}
 
 
 {% endblock %}
