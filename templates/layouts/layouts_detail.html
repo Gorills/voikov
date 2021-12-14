@@ -65,13 +65,13 @@
 
                     </div>
 
-                    <div class="layout__nav">
+                    {% comment %} <div class="layout__nav">
                         <div class="layout__nav-item">Планировка</div>
                         <div class="layout__nav-item">На этаже</div>
                         <div class="layout__nav-item">План секции</div>
 
                     
-                    </div>
+                    </div> {% endcomment %}
                 
                 
                 </div>
@@ -98,10 +98,10 @@
                     
                     </div>
                     <div class="layout__column-wrap">
-                        <div class="layout__column-item">
+                        {% comment %} <div class="layout__column-item">
                             <p class="layout__column-label">Дом</p>
                             <p class="layout__column-text">{{ layout.home.name }}</p>
-                        </div>
+                        </div> {% endcomment %}
                         <div class="layout__column-item">
                             
                                 <p class="layout__column-label">Площадь</p>
@@ -118,11 +118,11 @@
 
                             <div class="layout__column-ipo">
                                 <p class="layout__column-text">Ипотека</p>
-                                <p class="layout__column-staf"><span>5,85% </span>от 33 800 руб/мес</p>
+                                <p class="layout__column-staf">от {{layout.ipoteka}} руб/мес</p>
 
                             </div>
 
-                            <a href="#" class="layout__obm">Обмен</a>
+                            {% comment %} <a href="#" class="layout__obm">Обмен</a> {% endcomment %}
 
 
                             <a href="#" class="layout__column-btn callback-show">Забронировать</a>

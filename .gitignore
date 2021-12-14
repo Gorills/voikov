@@ -21,7 +21,7 @@ virt
 vojkov/__pycache__
 main/__pycache__
 __pycache__
-
+migrations
 layouts/migrations
 vojkov/migrations
 

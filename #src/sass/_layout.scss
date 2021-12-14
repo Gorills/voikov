@@ -5,6 +5,7 @@
         flex-direction: column;
     }
     
+    
     // .layout__left
 
     &__left {
@@ -187,21 +188,17 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+       
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    
         justify-content: center;
         font-size: 16px;
         color: #fff;
-        background-color: #3b4658;
+        background: $primary-gradient;
         cursor: pointer;
-        -webkit-transition: background-color 0.3s ease, opacity 0.3s ease;
+      
         transition: background-color 0.3s ease, opacity 0.3s ease;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
+       
         user-select: none;
 
         &:hover {
