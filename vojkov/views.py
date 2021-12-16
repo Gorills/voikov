@@ -7,7 +7,7 @@ from layouts.models import Room
 def home(request):
 
     context = {
-        'blocks': HomeBlock.objects.all(),
+        'blocks': HomeBlock.objects.all().order_by('id'),
         'rooms': Room.objects.all()
         
     }
