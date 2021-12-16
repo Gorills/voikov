@@ -181,7 +181,7 @@
                         {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
 
                         <p class="block__text">
-                        {{block.text}}
+                        {{block.text | safe }}
                         </p>
                     </div>
 
@@ -218,7 +218,7 @@
                         {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
 
                         <p class="block__text">
-                        {{block.text}}
+                            {{block.text | safe }}
                         </p>
                     </div>
 
@@ -266,7 +266,7 @@
                         {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
 
                         <p class="block__text">
-                        {{block.text}}
+                            {{block.text | safe }}
                         </p>
                     </div>
                    
