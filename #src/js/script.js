@@ -108,6 +108,8 @@ if(window.location.pathname=='/'){
             })
   
         } 
+
+        
   
   
         
@@ -137,7 +139,9 @@ if(window.location.pathname=='/'){
     var heighFive = $('#block5').height()
     var topBlockFive = blockFive + heighFive
   
-    
+    var blockSix = $('#block6').offset().top
+    var heighSix = $('#block6').height()
+    var topBlockSix = blockSix + heighSix
   
     var topScr = $(window).scrollTop() + 150;
     
@@ -184,6 +188,14 @@ if(window.location.pathname=='/'){
     } else {
       $('#link5').removeClass('sidebar__link--active')
       $('#dots5').removeClass('sidebar__index-dots--active')
+    }
+    if (topScr >= blockSix && topScr <= topBlockSix) {
+      $('#link6').addClass('sidebar__link--active')
+      $('#dots6').addClass('sidebar__index-dots--active')
+  
+    } else {
+      $('#link6').removeClass('sidebar__link--active')
+      $('#dots6').removeClass('sidebar__index-dots--active')
     }
   
    

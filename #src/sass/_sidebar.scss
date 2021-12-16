@@ -37,7 +37,7 @@
         position: absolute;
         width: 3px;
         background-color: #e8e8dd;
-        height: 204px;
+        height: 248px;
         // top: 84px;
         margin-bottom: 23px;
         left: -30px;
@@ -73,5 +73,17 @@
             background-color: #fff;
             clip-path: polygon(50% 0, 50% 0, 100% 30%, 100% 70%, 50% 100%, 50% 100%, 0% 70%, 0% 30%);
         }
+    }
+
+    // .sidebar__index-progress
+
+    &__index-progress {
+        position: absolute;
+        width: 3px;
+        height: 0%;
+        max-height: 99%;
+        margin-top: 2px;
+        
+        background-color: $primary;
     }
 }
