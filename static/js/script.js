@@ -98,38 +98,50 @@ if (window.location.pathname == '/') {
 
     if (topScr >= blockOne && topScr <= topBlockOne) {
       $('#link1').addClass('sidebar__link--active');
+      $('#dots1').addClass('sidebar__index-dots--active');
     } else {
       $('#link1').removeClass('sidebar__link--active');
+      $('#dots1').removeClass('sidebar__index-dots--active');
     }
 
     if (topScr >= blockTwo && topScr <= topBlockTwo) {
       $('#link2').addClass('sidebar__link--active');
+      $('#dots2').addClass('sidebar__index-dots--active');
     } else {
       $('#link2').removeClass('sidebar__link--active');
+      $('#dots2').removeClass('sidebar__index-dots--active');
     }
 
     if (topScr >= blockTree && topScr <= topBlockTree) {
       $('#link3').addClass('sidebar__link--active');
+      $('#dots3').addClass('sidebar__index-dots--active');
     } else {
       $('#link3').removeClass('sidebar__link--active');
+      $('#dots3').removeClass('sidebar__index-dots--active');
     }
 
     if (topScr >= blockFor && topScr <= topBlockFor) {
       $('#link4').addClass('sidebar__link--active');
+      $('#dots4').addClass('sidebar__index-dots--active');
     } else {
       $('#link4').removeClass('sidebar__link--active');
+      $('#dots4').removeClass('sidebar__index-dots--active');
     }
 
     if (topScr >= blockFive && topScr <= topBlockFive) {
       $('#link5').addClass('sidebar__link--active');
+      $('#dots5').addClass('sidebar__index-dots--active');
     } else {
       $('#link5').removeClass('sidebar__link--active');
+      $('#dots5').removeClass('sidebar__index-dots--active');
     }
 
     if (topScr >= blockSix && topScr <= topBlockSix) {
       $('#link6').addClass('sidebar__link--active');
+      $('#dots6').addClass('sidebar__index-dots--active');
     } else {
       $('#link6').removeClass('sidebar__link--active');
+      $('#dots6').removeClass('sidebar__index-dots--active');
     }
   });
 } else {}

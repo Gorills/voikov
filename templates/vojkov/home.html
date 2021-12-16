@@ -135,6 +135,13 @@
 
             <div class="block__wrap">
                 <div class="sidebar" id="sidebar">
+                    
+                    <div class="sidebar__index">
+                        {% for block in blocks %}
+                        <div id="dots{{ forloop.counter }}" class="sidebar__index-dots"></div>
+                        {% endfor %}
+
+                    </div>
 
                     <ul class="sidebar__list">
 
@@ -171,7 +178,7 @@
                <div class="block__content">
                     <div class="block__content-wrap">
                         <h2 class="block__title">{{block.title}}</h2>
-                        <p class="block__subtitle">{{block.desc}}</p>
+                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
 
                         <p class="block__text">
                         {{block.text}}
@@ -208,7 +215,7 @@
 
                     <div class="block__content-wrap">
                         <h2 class="block__title">{{block.title}}</h2>
-                        <p class="block__subtitle">{{block.desc}}</p>
+                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
 
                         <p class="block__text">
                         {{block.text}}
@@ -256,7 +263,7 @@
                 <div class="block__content">
                     <div class="block__content-wrap">
                         <h2 class="block__title">{{block.title}}</h2>
-                        <p class="block__subtitle">{{block.desc}}</p>
+                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
 
                         <p class="block__text">
                         {{block.text}}
@@ -371,7 +378,6 @@
 
 </div> {% endcomment %}
 
-
 <div class="standart">
     <div class="container">
         <div class="standart__inner">
@@ -403,7 +409,7 @@
                     <p class="pay__title">Ипотека</p>
                     <p class="pay__text">Наши дома аккредитованы во всех ведущих банках, подберём оптимальное решение с минимальной ставкой от 4,75% на сегодняшний день. Не хотите копить на первоначальный взнос, а приобрести новую квартиру прямо сейчас - не проблема! Различные виды субсидированных ипотечных программ, работаем со всеми видами государственных сертификатов.</p>
                     
-                  
+                    
 
                     <img src="{% static 'images/how-one.svg' %}" alt="" class="pay__bg">
 
