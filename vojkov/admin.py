@@ -3,7 +3,7 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.db import models
 
-from .models import Doc, DocCat, Page, PageBlock, HomeBlock, HomeBlockImages, HodBlock, HodBlockImages
+from .models import Doc, DocCat, Page, PageBlock, HomeBlock, HomeBlockImages, HodBlock, HodBlockImages, Ipoteka, Banks
 # Register your models here.
 
 
@@ -77,3 +77,7 @@ class HodBlockAdmin(admin.ModelAdmin):
     ]
 
 admin.site.register(HodBlock, HodBlockAdmin)
+
+
+admin.site.register(Ipoteka)
+admin.site.register(Banks)

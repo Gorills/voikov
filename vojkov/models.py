@@ -134,3 +134,34 @@ class HodBlockImages(models.Model):
         
         verbose_name = 'Картинка'
         verbose_name_plural = 'Картинки'
+
+
+
+class Ipoteka(models.Model):
+    name = models.CharField(max_length=250)
+    persent = models.CharField(max_length=20)
+
+
+    def __str__(self):
+        return self.name
+
+
+    class Meta:
+        
+        verbose_name = 'Ипотека'
+        verbose_name_plural = 'Ипотеки'
+
+
+class Banks(models.Model):
+    name = models.CharField(max_length=250)
+    logo = models.ImageField(upload_to='images/banks')
+
+
+    def __str__(self):
+        return self.name
+
+
+    class Meta:
+        
+        verbose_name = 'Банк'
+        verbose_name_plural = 'Банки'

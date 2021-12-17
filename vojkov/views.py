@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-from .models import DocCat, Page, HomeBlock, HodBlock
+from .models import DocCat, Page, HomeBlock, HodBlock, Ipoteka, Banks
 from layouts.models import Room
 # Create your views here.
 def home(request):
@@ -43,3 +43,12 @@ def hod_stroitelstva(request):
     }
 
     return render(request, 'vojkov/hod.html', context)
+
+
+def ipoteka(request):
+
+    context = {
+        'ipoteks': Ipoteka.objects.all().order_by('id'),
+        'banks': Banks.objects.all().order_by('id'),
+    }
+    return render(request, 'vojkov/ipoteka.html', context)

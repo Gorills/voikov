@@ -1,0 +1,87 @@
+
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %}
+{% block description %}  {% endblock %}
+{% block keywords %}{% endblock %}
+{% block canonical %}  {% endblock %}
+{% block og:title %}{% endblock %}
+{% block og:description %}{% endblock %}
+{% block og:url %}  {% endblock %}
+{% block twitter:title %}{% endblock %}
+{% block twitter:description %} {% endblock %}
+
+
+    
+     
+
+{% block body %}
+{% load static %}
+{% load thumbnail %}
+<div class="breadcrumbs" style="margin-bottom: 40px;">
+    <div class="container">
+        <div class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="{% url 'home' %}" class="breadcrumbs__link">Главная</a></li>
+           
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Ипотека</div></li>
+        </div>
+        
+    </div>
+
+</div>
+        
+
+
+<div class="standart">
+    <div class="container">
+        <div class="standart__inner">
+            <h1 class="title">Ипотека</h1>
+        
+            <div class="sibtitle"><img src="{% static 'images/subtitle.png' %}" alt=""></div>
+    
+            <p class="standart__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti culpa nam delectus est minus at consequatur esse omnis aliquid repellat dolorum tempore nihil recusandae quod nostrum fugit, nesciunt ullam amet doloribus in possimus doloremque suscipit? Provident suscipit consequatur voluptates adipisci odit in accusantium tenetur id, natus nesciunt hic sed, officia aut optio expedita blanditiis velit sapiente nisi quod ex recusandae? At dolor in numquam accusamus dolorem et obcaecati excepturi. Error nostrum culpa nesciunt doloribus earum placeat cumque, voluptates eveniet labore porro dicta officia dignissimos perferendis tenetur obcaecati similique quas maiores alias quis voluptatum. Mollitia aperiam ipsa amet incidunt, officiis voluptate.</p>
+            <p class="standart__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti culpa nam delectus est minus at consequatur esse omnis aliquid repellat dolorum tempore nihil recusandae quod nostrum fugit, nesciunt ullam amet doloribus in possimus doloremque suscipit? Provident suscipit consequatur voluptates adipisci odit in accusantium tenetur id, natus nesciunt hic sed, officia aut optio expedita blanditiis velit sapiente nisi quod ex recusandae? At dolor in numquam accusamus dolorem et obcaecati excepturi. Error nostrum culpa nesciunt doloribus earum placeat cumque, voluptates eveniet labore porro dicta officia dignissimos perferendis tenetur obcaecati similique quas maiores alias quis voluptatum. Mollitia aperiam ipsa amet incidunt, officiis voluptate.</p>
+            
+
+
+            <h2 class="ipoteka__title">Выбрать ипотечную программу</h2>
+
+            <div class="ipoteka">
+                {% for ipoteka in ipoteks %}
+                <a href="#" class="ipoteka__item callback-show">
+                    <p class="ipoteka__text"> {{ ipoteka.name }} <span>{{ ipoteka.persent }}</span>%</p>
+                </a>
+                
+                
+                {% endfor %}
+                
+                
+
+                <div class="ipoteka__btn-group">
+                    <a href="{% url 'layouts' %}" class="btn">Выбрать квартиру</a>
+                    <a href="#" class="btn callback-show">Получить расчет</a>
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="banks">
+
+                {% for bank in banks %}
+                <div class="banks__item">
+                    <img src="{{ bank.logo.url }}" alt="" class="banks__logo">
+
+
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

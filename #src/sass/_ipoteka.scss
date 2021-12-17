@@ -1,0 +1,68 @@
+.ipoteka {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    // .ipoteka__title
+
+    &__title {
+        margin-top: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+    // .ipoteka__item
+
+    &__item {
+        width: 30%;
+        display: block;
+        border: 1px solid #dedede;
+        padding: 40px 20px ;
+        text-align: center;
+        color: $font-dark;
+        transition: $transition;
+        &:hover {
+            color: #fff;
+            background: url('/static/images/footer-bg.svg');
+        }
+        @media screen and (max-width: 768px) {
+            width: 48%;
+        }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
+    // .ipoteka__text
+
+    &__text {
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    // .ipoteka__btn-group
+
+    &__btn-group {
+        text-align: center;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: 768px) {
+            width: 48%;
+        }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+        a {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a + a {
+            margin-top: 20px;
+        }
+    }
+}

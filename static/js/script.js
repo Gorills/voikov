@@ -61,7 +61,10 @@ $(document).ready(function () {
     result += val;
   });
   $(window).scroll(function () {
-    var delayTop = $('#block1').offset().top;
+    if ($('#block1').length > 0) {
+      var delayTop = $('#block1').offset().top;
+    }
+
     var scrolls = $(window).scrollTop();
     var start = scrolls - delayTop + 125;
     var stop = result + delayTop;

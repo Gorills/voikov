@@ -92,9 +92,9 @@ $('.popup-call__closer, .popup-call__close').click(function(e){
     
   
     $(window).scroll(function(){
-        
+      if ( $('#block1').length > 0) {
         var delayTop = $('#block1').offset().top;
-        
+      }
         var scrolls = $(window).scrollTop();
         
         var start = scrolls - delayTop + 125;
