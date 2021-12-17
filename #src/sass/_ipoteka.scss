@@ -18,8 +18,11 @@
         width: 30%;
         display: block;
         border: 1px solid #dedede;
+        display: flex;
+        align-items: center;
         padding: 40px 20px ;
         text-align: center;
+        justify-content: center;
         color: $font-dark;
         transition: $transition;
         &:hover {
