@@ -180,6 +180,9 @@
             top: 45%;
             z-index: 2;
             cursor: pointer;
+            @media screen and (max-width: 768px) {
+                top: 35%;
+            }
         }
         .prev {
             left: 20px;
