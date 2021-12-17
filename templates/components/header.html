@@ -1,14 +1,42 @@
 {% load static %}
 
 
-<div class="toggle-menu-2" id="menu-2">
-    <div class="toggle-section-2">
-        <a href="#" class="menu-btn-2">
-            <span></span>
-        </a>
+<div class="header__mobile">
+
+    <div class="container">
+        <div class="header__mobile-inner">
+            <a href="{% url 'home' %}" class="header__mobile-logo">
+            
+                <div class="header__mobile-logo-wrap">
+                    <h1 class="header__mobile-title">войков</h1>
+                    <p class="header__mobile-subtitle">жилой комплекс</p>
+                </div>
+                
+            
+            </a>
+
+            <div class="header__contacts">
+
+                
+                <a href="https://www.instagram.com/voikov_tomsk/" class="header__social"><i class="fab fa-instagram"></i></a>
+            
+            
+            
+            </div>
+
+            <div class="toggle-menu-2" id="menu-2">
+                <div class="toggle-section-2">
+                    <a href="#" class="menu-btn-2">
+                        <span></span>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
     </div>
-   
 </div>
+
+
 
 
 
@@ -28,7 +56,12 @@
         <div class="container">
             <div class="header__inner">
                 <a href="{% url 'home' %}" class="header__logo">
-                    <img src="{% static 'images/logo.png' %}" alt="logo">
+                    <img src="{% static 'images/logo-back.svg' %}" class="header__logo-back" alt="logo">
+                    <div class="header__logo-wrap">
+                        <h1 class="header__logo-title">войков</h1>
+                        <p class="header__logo-subtitle">жилой комплекс</p>
+                    </div>
+                    
                 
                 </a>
 

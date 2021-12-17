@@ -32,6 +32,55 @@
 		
 }
 
+
+@font-face {
+    font-family: 'Cormorant SC';
+    src: local('Cormorant SC Light'), 
+    local('CormorantSC-Light'), 
+    url('../fonts/cormorantsc/Cormorantsclight.woff2') format('woff2'), 
+    url('../fonts/cormorantsc/Cormorantsclight.woff') format('woff'), 
+    url('../fonts/cormorantsc/Cormorantsclight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant SC';
+    src: local('Cormorant SC'), local('CormorantSC-Regular'),
+    url('../fonts/cormorantsc/Cormorantsc.woff2') format('woff2'), 
+    url('../fonts/cormorantsc/Cormorantsc.woff') format('woff'), 
+    url('../fonts/cormorantsc/Cormorantsc.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant SC';
+    src: local('Cormorant SC Book'), local('CormorantSC-Book'), 
+    url('../fonts/cormorantsc/Cormorantscbook.woff2') format('woff2'), 
+    url('../fonts/cormorantsc/Cormorantscbook.woff') format('woff'), 
+    url('../fonts/cormorantsc/Cormorantscbook.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant SC';
+    src: local('Cormorant SC Semibold'), local('CormorantSC-Semibold'), 
+    url('../fonts/cormorantsc/Cormorantscsemibold.woff2') format('woff2'), 
+    url('../fonts/cormorantsc/Cormorantscsemibold.woff') format('woff'), 
+    url('../fonts/cormorantsc/Cormorantscsemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant SC';
+    src: local('Cormorant SC Bold'), local('CormorantSC-Bold'),
+    url('../fonts/cormorantsc/Cormorantscbold.woff2') format('woff2'), 
+    url('../fonts/cormorantsc/Cormorantscbold.woff') format('woff'), 
+    url('../fonts/cormorantsc/Cormorantscbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 @font-face {
     font-family: 'Grtsk Exa';
     src: url('../fonts/GrtskExa/GrtskExa-BoldItalic.eot');

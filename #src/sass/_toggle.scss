@@ -82,14 +82,14 @@
 // Toggle menu
 .toggle-menu-2 {
     padding: 10px;
-    position: fixed;
+    // position: fixed;
     z-index: 999;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     right: 0;
-    background-color: $blue;
+    background-color: $primary;
     display: none;
-    @media screen and (max-width: 425px) {
-        display: block;
+    @media screen and (max-width: 768px) {
+        display: inline-block;
     }
         
 }
