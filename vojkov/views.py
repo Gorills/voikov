@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-from .models import DocCat, Page, HomeBlock
+from .models import DocCat, Page, HomeBlock, HodBlock
 from layouts.models import Room
 # Create your views here.
 def home(request):
@@ -33,3 +33,13 @@ def page(request, slug):
 
 
     return render(request, 'vojkov/page.html', context)
+
+
+def hod_stroitelstva(request):
+
+    context = {
+        'blocks': HodBlock.objects.all().order_by('id'),
+
+    }
+
+    return render(request, 'vojkov/hod.html', context)

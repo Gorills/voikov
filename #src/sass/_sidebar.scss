@@ -12,6 +12,7 @@
         list-style: none;
         padding: 0;
         margin: 80px auto 0;
+        position: relative;
     }
 
     // .sidebar__item
@@ -37,9 +38,9 @@
         position: absolute;
         width: 3px;
         background-color: #e8e8dd;
-        height: 248px;
-        // top: 84px;
-        margin-bottom: 23px;
+        
+        top: 3px;
+        bottom: 25px;
         left: -30px;
         display: flex;
         flex-direction: column;

@@ -1,0 +1,227 @@
+
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %}
+{% block description %}  {% endblock %}
+{% block keywords %}{% endblock %}
+{% block canonical %}  {% endblock %}
+{% block og:title %}{% endblock %}
+{% block og:description %}{% endblock %}
+{% block og:url %}  {% endblock %}
+{% block twitter:title %}{% endblock %}
+{% block twitter:description %} {% endblock %}
+
+
+    
+     
+
+{% block body %}
+{% load static %}
+{% load thumbnail %}
+<div class="breadcrumbs" style="margin-bottom: 40px;">
+    <div class="container">
+        <div class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="{% url 'home' %}" class="breadcrumbs__link">Главная</a></li>
+           
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Ход строительства</div></li>
+        </div>
+        
+    </div>
+
+</div>
+        <h2 class="title"><span>Ход</span> строительства</h2>
+        
+        <div class="sibtitle"><img src="{% static 'images/subtitle.png' %}" alt=""></div>
+
+<div class="block" id="proect">
+
+                
+    
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                <div class="sidebar" id="sidebar">
+                    
+                    
+
+                    <ul class="sidebar__list">
+                        <div class="sidebar__index">
+                            <div class="sidebar__index-progress"></div>
+                            {% for block in blocks %}
+                            <div id="dots{{ forloop.counter }}" class="sidebar__index-dots"></div>
+                            {% endfor %}
+    
+                        </div>
+                    {% for block in blocks %}
+                    
+                        <li class="sidebar__item"><a id="link{{ forloop.counter }}" href="#block{{ forloop.counter }}" class="sidebar__link">{{ block.title }}</a></li>
+                    {% endfor %}
+                        
+                        
+                    </ul>
+                
+                
+                </div>
+
+                
+            
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% for block in blocks %}
+
+<div class="block" id ="block{{ forloop.counter }}">
+
+    {% if block.solo %}
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+               <div class="block__content">
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">{{block.title}}</h2>
+                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
+
+                        <p class="block__text">
+                        {{block.text | safe }}
+                        </p>
+                    </div>
+
+                    {% for image in block.images.all %}
+                        <a class="image-link" href="{{ image.image.url }}">
+                        {% thumbnail image.image "388x320" crop="center" as im %}
+                        
+                            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="" class="block__img">
+                            
+                            
+                        {% endthumbnail %}
+                        </a>
+                    {% endfor %}
+                    
+
+                
+                </div> 
+            </div>
+            
+        </div>
+    </div>
+    
+    {% elif block.grid %}
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+                <div class="block__content">
+
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">{{block.title}}</h2>
+                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
+
+                        <p class="block__text">
+                            {{block.text | safe }}
+                        </p>
+                    </div>
+
+                    
+                
+                </div>
+
+                <div class="block__grid">
+
+                    {% for image in block.images.all %}
+                        
+                        <a href={{image.image.url}} class="block__item">
+                            {% thumbnail image.image "631x300" crop="center" as im %}
+                              
+                                
+                                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"  alt="" class="block__item-img">
+                            
+                            {% endthumbnail %}
+                            
+
+                        </a>
+                    {% endfor %}
+                    
+                    
+                    
+                    
+                
+                </div>
+            
+            </div>
+            
+        </div>
+    </div>
+    
+    {% elif block.slider %}
+    <div class="block__inner">
+        <div class="container">
+
+            <div class="block__wrap">
+                
+
+                <div class="block__content">
+                    <div class="block__content-wrap">
+                        <h2 class="block__title">{{block.title}}</h2>
+                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
+
+                        <p class="block__text">
+                            {{block.text | safe }}
+                        </p>
+                    </div>
+                   
+                </div>
+
+                <div class="block__slider-wrap">
+
+                    <div class="block__slider">
+
+                        {% for image in block.images.all %}
+                            <a href="{{ image.image.url }}" class="block__slide">
+                                
+                                {% thumbnail image.image "1000x514" crop="center" as im %}
+                              
+                                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="" class="block__slide-img">
+                                {% endthumbnail %}
+                            
+                            </a>
+                        {% endfor %}
+
+                
+                    </div>      
+
+                    <div class="block__slider-nav">
+                        {% for image in block.images.all %}
+                           
+                            {% thumbnail image.image "163x100" crop="center" as im %}
+                                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="">
+                            {% endthumbnail %}
+                                
+                            
+                            
+                        {% endfor %}
+                    </div>               
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    
+    {% endif %}
+    
+    
+</div>
+
+{% endfor %}
+
+{% endblock %}
