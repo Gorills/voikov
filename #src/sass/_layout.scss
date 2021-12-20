@@ -259,13 +259,14 @@
     &__item {
         display: block;
         
-        padding: 0 20px;
-         margin: 0 20px;
+        
     }
 
     // .plan-slider__img
 
     &__img {
         height: 175px;
+        object-fit: contain;
+        width: 100%;
     }
 }
