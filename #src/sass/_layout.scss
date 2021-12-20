@@ -230,6 +230,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
     // .hod__link
 
     &__link {
@@ -242,5 +245,24 @@
     // .hod__img
     &__img {
         
+    }
+}
+
+
+.plan-slider {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    // .plan-slider__item
+
+    &__item {
+        display: block;
+    }
+
+    // .plan-slider__img
+
+    &__img {
+        height: 175px;
     }
 }

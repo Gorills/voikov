@@ -19,6 +19,7 @@ def layouts(request):
 def layouts_detail(request, slug):
 
     context = {
+        'layouts': Layouts.objects.all(),
         'hods': HodBlockImages.objects.all().order_by('-id')[:4],
         'layout': Layouts.objects.get(slug=slug),
         'ipoteks': Ipoteka.objects.all().order_by('id'),

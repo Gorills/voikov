@@ -62,8 +62,8 @@
 
 
                         <div class="layout__prev">
-                            <img src="{{ layout.side.img.url }}" alt="" class="layout__side">
-                            <img src="{{ layout.plan.url }}" alt="" class="layout__atflore">
+                            {% comment %} <img src="{{ layout.side.img.url }}" alt="" class="layout__side">
+                            <img src="{{ layout.plan.url }}" alt="" class="layout__atflore"> {% endcomment %}
                         
                         </div>
 
@@ -145,17 +145,27 @@
 </div>
 
 {% load thumbnail %}
-{% comment %} 
+
 <div class="standart">
     <div class="container">
         <div class="standart__inner">
             <h2 class="layout__subtitle"><span>Виды</span> планировок</h2>
 
+            <div class="plan-slider">
+                {% for lay in layouts %}
+                <a href="{{ lay.get_absolute_url }}" class="plan-slider__item">
+                    <img src="{{ lay.plan.url }}" alt="" class="plan-slider__img">
 
+                </a>
+                
+                {% endfor %}
+                
+
+            </div>
 
         </div>
     </div>
-</div> {% endcomment %}
+</div>
 <div class="standart">
     <div class="container">
         <div class="standart__inner">
