@@ -24,7 +24,7 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
     }
 
     // .layout__slider
@@ -58,7 +58,7 @@
 
     &__atflore {
         width: 100%;
-        max-width: 82px;
+        max-width: 120px;
     }
 
     // .layout__nav
@@ -210,5 +210,34 @@
         align-items: center;
     }
 
+    // .layout__subtitle
+    &__subtitle {
+        font-size: 24px;
+        margin-bottom: 40px;
+        span {
+            font-weight: 700;
+        }
+    }
 }
 
+
+.hod {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    // .hod__link
+
+    &__link {
+        display: inline-block;
+
+        @media screen and (max-width: 480px) {
+            margin: 0 auto; 
+        }
+    }
+    // .hod__img
+    &__img {
+        
+    }
+}

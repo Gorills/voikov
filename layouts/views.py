@@ -1,5 +1,8 @@
 from django.shortcuts import render
+
+
 from .models import Layouts, Room
+from vojkov.models import Ipoteka, Banks, HodBlockImages
 # Create your views here.
 
 
@@ -16,7 +19,10 @@ def layouts(request):
 def layouts_detail(request, slug):
 
     context = {
+        'hods': HodBlockImages.objects.all().order_by('-id')[:4],
         'layout': Layouts.objects.get(slug=slug),
+        'ipoteks': Ipoteka.objects.all().order_by('id'),
+        'banks': Banks.objects.all().order_by('id'),
     }
 
     return render(request, 'layouts/layouts_detail.html', context)
