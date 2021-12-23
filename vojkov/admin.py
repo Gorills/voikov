@@ -7,8 +7,8 @@ from .models import Doc, DocCat, Page, PageBlock, HomeBlock, HomeBlockImages, Ho
 # Register your models here.
 
 
-admin.site.register(Doc)
-admin.site.register(DocCat)
+# admin.site.register(Doc)
+# admin.site.register(DocCat)
 
 class PageAdminForm(forms.ModelForm):
     text = forms.CharField(label='Описание', widget=CKEditorUploadingWidget())
@@ -46,7 +46,7 @@ class PageAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
-admin.site.register(Page, PageAdmin)
+# admin.site.register(Page, PageAdmin)
 
 
 
