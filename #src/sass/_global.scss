@@ -151,3 +151,22 @@ a   {
         }
     }
 }
+
+
+
+.callback-center {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+		// .callback-center__inner
+
+		&__inner {
+            display: flex;
+            a {
+                width: fit-content;
+                padding: 0 25px;
+                margin: 0 auto;
+            }
+		}
+}
+

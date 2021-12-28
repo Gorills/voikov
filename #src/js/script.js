@@ -349,3 +349,4 @@ $('.image-link').magnificPopup({type:'image'});
 
 
 $('.layout__img-link').magnificPopup({type:'image'});
+$('.layout__atflore-wrap').magnificPopup({type:'image'});

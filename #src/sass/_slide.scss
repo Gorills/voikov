@@ -26,8 +26,12 @@
 
     &__inner {
         position: relative;
-        z-index: 2;
-        margin-bottom: 50px;
+        z-index: 5;
+        
+        padding: 20px;
+        width: fit-content;
+        margin: 0 auto 50px;
+        background-color: rgba(94, 94, 94, 0.474);
         
     }
 
@@ -66,12 +70,25 @@
     }
 
     &__btn {
-        display: none;
+        display: flex;
         position: relative;
         z-index: 3;
         margin: 0 auto;
         @media screen and (max-width: 768px) {
             display: flex;
         }
+    }
+    // .slide__slog
+
+    &__slog {
+        text-align: center;
+        font-size: 45px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-family: "Forum",sans-serif;
+        font-weight: 500!important;
+        margin-bottom: 50px;
     }
 }

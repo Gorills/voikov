@@ -29,7 +29,12 @@ class Layouts(models.Model):
     area = models.CharField(max_length=200, verbose_name='Площадь квартиры')
     price = models.CharField(max_length=200, verbose_name='Цена от ...')
     rooms = models.CharField(max_length=200, verbose_name='Количество комнат')
+    etazhi = models.CharField(max_length=200, verbose_name='Этажи', null=True, blank=True)
+
     plan = models.ImageField(upload_to='layouts', verbose_name='Планировка')
+    etazh = models.ImageField(upload_to='layouts', verbose_name='Поэтажная планировка', null=True, blank=True)
+    etazh_mob = models.ImageField(upload_to='layouts/mob', verbose_name='Поэтажная планировка(мобильная версия)', null=True, blank=True)
+
     slug = models.SlugField(verbose_name='URL')
     side = models.ForeignKey('Side', related_name='layouts', verbose_name='Сторона света', on_delete=models.PROTECT, null=True, blank=True)
     home = models.ForeignKey('Home', related_name='lay', verbose_name='Дом', on_delete=models.CASCADE)

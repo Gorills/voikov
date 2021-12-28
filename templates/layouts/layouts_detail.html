@@ -49,10 +49,7 @@
                     <div class="layout__wrap">
                         <div class="layout__slider">
                             <div><a class="layout__img-link" href="{{ layout.plan.url }}"><img src="{{ layout.plan.url }}" alt="" class="layout__img"></a></div>
-                            {% comment %} <div><img src="{{ layout.at_flore.url }}" alt="" class="layout__img"></div>
-                            <div><img src="{{ layout.section.url }}" alt="" class="layout__img"></div>
                             
-                             {% endcomment %}
 
                             
 
@@ -62,8 +59,19 @@
 
 
                         <div class="layout__prev">
-                            {% comment %} <img src="{{ layout.side.img.url }}" alt="" class="layout__side">
-                            <img src="{{ layout.plan.url }}" alt="" class="layout__atflore"> {% endcomment %}
+                            <img src="{{ layout.side.img.url }}" alt="" class="layout__side">
+                            {% if layout.etazh %}
+                            <a class="layout__atflore-wrap" href="{{ layout.etazh.url }}">
+                                <img src="{{ layout.etazh.url }}" alt="" class="layout__atflore"> 
+                            </a>
+                            
+                            {% endif %}
+                            {% if layout.etazh_mob %}
+                            <a class="layout__atflore-wrap" href="{{ layout.etazh_mob.url }}">
+                                <img src="{{ layout.etazh_mob.url }}" alt="" class="layout__atflore-mob"> 
+                            </a>
+                            
+                            {% endif %}
                         
                         </div>
 
@@ -102,10 +110,7 @@
                     
                     </div>
                     <div class="layout__column-wrap">
-                        {% comment %} <div class="layout__column-item">
-                            <p class="layout__column-label">Дом</p>
-                            <p class="layout__column-text">{{ layout.home.name }}</p>
-                        </div> {% endcomment %}
+                        
                         <div class="layout__column-item">
                             
                                 <p class="layout__column-label">Площадь</p>
@@ -113,7 +118,12 @@
 
                                                 
                         </div>
-                    
+                        {% if layout.etazhi %}
+                        <div class="layout__column-item">
+                            <p class="layout__column-label">Этажи</p>
+                            <p class="layout__column-text">{{ layout.etazhi }}</p>
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="layout__column-wrap">
 

@@ -25,6 +25,9 @@
         display: flex;
         justify-content: space-between;
         // align-items: center;
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+        }
     }
 
     // .layout__slider
@@ -49,6 +52,13 @@
     &__prev {
         text-align: center;
         margin: 0 auto; 
+
+        @media screen and (max-width: 480px) {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
     }
 
     // .layout__side
@@ -62,8 +72,20 @@
     &__atflore {
         width: 100%;
         max-width: 120px;
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
     }
+    // .layout__atflore-mob
 
+    &__atflore-mob {
+        width: 100%;
+        max-width: 120px;
+        display: none;
+        @media screen and (max-width: 480px) {
+            display: block;
+        }
+    }
     // .layout__nav
 
     &__nav {
