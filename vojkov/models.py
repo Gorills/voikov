@@ -110,8 +110,8 @@ class HomeBlockImages(models.Model):
 
 class HodBlock(models.Model):
     title = models.CharField(max_length=250, verbose_name='Навание')
-    desc = models.CharField(max_length=300, verbose_name='Короткое описание')
-    text = models.TextField(verbose_name='Полное описание')
+    desc = models.CharField(max_length=300, verbose_name='Короткое описание', null=True, blank=True)
+    text = models.TextField(verbose_name='Полное описание', null=True, blank=True)
     slider = models.BooleanField(verbose_name='Слайдер')
     solo = models.BooleanField(verbose_name='Одна картинка')
     grid = models.BooleanField(verbose_name='Сетка 4 фото')
