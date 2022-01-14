@@ -89,7 +89,7 @@
 
                <div class="block__content">
                     <div class="block__content-wrap">
-                        <h2 class="block__title" style="margin-bottom:0!important;">{{block.title}}</h2>
+                        <h2 class="block__title" style="margin-bottom: 0!important;">{{block.title}}</h2>
                         {% if desc %}
                         
                         <p class="block__subtitle">{{block.desc}}</p>
@@ -133,12 +133,18 @@
                 <div class="block__content">
 
                     <div class="block__content-wrap">
-                        <h2 class="block__title">{{block.title}}</h2>
-                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
-
-                        <p class="block__text">
+                        <h2 class="block__title" style="margin-bottom: 0!important;">{{block.title}}</h2>
+                        {% if desc %}
+                        
+                        <p class="block__subtitle">{{block.desc}}</p>
+                        {% endif %}
+                        
+                        {% if text %}
+                            <p class="block__text">
                             {{block.text | safe }}
-                        </p>
+                            </p>
+                        
+                        {% endif %}
                     </div>
 
                     
@@ -181,12 +187,18 @@
 
                 <div class="block__content">
                     <div class="block__content-wrap">
-                        <h2 class="block__title">{{block.title}}</h2>
-                        {% comment %} <p class="block__subtitle">{{block.desc}}</p> {% endcomment %}
-
-                        <p class="block__text">
+                        <h2 class="block__title" style="margin-bottom: 0!important;">{{block.title}}</h2>
+                        {% if desc %}
+                        
+                        <p class="block__subtitle">{{block.desc}}</p>
+                        {% endif %}
+                        
+                        {% if text %}
+                            <p class="block__text">
                             {{block.text | safe }}
-                        </p>
+                            </p>
+                        
+                        {% endif %}
                     </div>
                    
                 </div>
