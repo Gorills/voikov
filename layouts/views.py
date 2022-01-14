@@ -9,7 +9,7 @@ from vojkov.models import Ipoteka, Banks, HodBlockImages
 def layouts(request):
 
     context = {
-        'layouts': Layouts.objects.all(),
+        'layouts': Layouts.objects.filter(activ=True),
         
     }
 
