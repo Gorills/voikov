@@ -8,12 +8,13 @@
     // .banks__item
 
     &__item {
-
+        width: 20%;
     }
 
     // .banks__logo
 
     &__logo {
         height: 40px;
+        object-fit: contain;
     }
 }
