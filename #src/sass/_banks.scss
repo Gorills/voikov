@@ -9,6 +9,10 @@
 
     &__item {
         width: 20%;
+        @media screen and (max-width: 480px) {
+            width: 45%;
+            text-align: center;
+        }
     }
 
     // .banks__logo
