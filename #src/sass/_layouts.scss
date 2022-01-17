@@ -10,6 +10,9 @@
     }
     .title {
         text-align: start;
+        @media screen and (max-width: 480px) {
+            font-size: 26px;
+        }
     }
     // .layouts__grid
 
