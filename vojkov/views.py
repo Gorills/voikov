@@ -38,7 +38,7 @@ def page(request, slug):
 def hod_stroitelstva(request):
 
     context = {
-        'blocks': HodBlock.objects.all().order_by('id'),
+        'blocks': HodBlock.objects.all().order_by('-id'),
 
     }
 
