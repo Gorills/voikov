@@ -8,17 +8,17 @@
     // .banks__item
 
     &__item {
-        width: 20%;
-        @media screen and (max-width: 480px) {
-            width: 45%;
-            text-align: center;
-        }
+        width: 250px;
+        height: 100px;
     }
 
     // .banks__logo
 
     &__logo {
-        height: 40px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+
         object-fit: contain;
     }
 }
