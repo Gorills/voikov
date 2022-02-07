@@ -19,10 +19,20 @@
 
 <div class="slide">
     <div class="container">
-        <div class="slide__inner">
-            <p class="slide__slog">Пространство вашей новой жизни</p>
-            <a href="{% url 'layouts' %}" class="btn slide__btn callback-show">Подробнее о проекте</a>
-            {% comment %} <h1 class="slide__title">Жилой комплекс "Войков"</h1> {% endcomment %}
+
+
+        <div class="slide__wrap">
+            <div class="slide__inner">
+                <p class="slide__slog">Пространство вашей новой жизни</p>
+                <a href="{% url 'layouts' %}" class="btn slide__btn callback-show">Подробнее о проекте</a>
+                
+            </div>
+            <div class="slide__video">
+                <video class="preim__video" controls autoplay="" muted="" loop="" id="myVideo">
+                    <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+
         </div>
     </div>
     <img src="{% static 'images/d11.jpg' %}" alt="" class="slide__bg">

@@ -24,4 +24,4 @@ __pycache__
 migrations
 layouts/migrations
 vojkov/migrations
-
+static/video
