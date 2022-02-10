@@ -23,7 +23,7 @@ def layouts_detail(request, slug):
         'hods': HodBlockImages.objects.all().order_by('-id')[:4],
         'layout': Layouts.objects.get(slug=slug),
         'ipoteks': Ipoteka.objects.all().order_by('id'),
-        'banks': Banks.objects.all().order_by('id'),
+        'banks': Banks.objects.all().order_by('order'),
     }
 
     return render(request, 'layouts/layouts_detail.html', context)
