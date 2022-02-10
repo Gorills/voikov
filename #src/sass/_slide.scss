@@ -42,7 +42,8 @@
         position: relative;
         z-index: 5;
         gap: 20px;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
         margin-bottom: 50px;
         @media screen and(max-width:992px) {
             flex-direction: column;

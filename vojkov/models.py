@@ -155,7 +155,7 @@ class Ipoteka(models.Model):
 class Banks(models.Model):
     name = models.CharField(max_length=250)
     logo = models.ImageField(upload_to='images/banks')
-
+    order = models.CharField(max_length=20, verbose_name='Сортировка', default='0')
 
     def __str__(self):
         return self.name

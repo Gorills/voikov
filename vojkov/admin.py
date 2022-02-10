@@ -80,4 +80,10 @@ admin.site.register(HodBlock, HodBlockAdmin)
 
 
 admin.site.register(Ipoteka)
-admin.site.register(Banks)
+
+
+class BanksAdmin(admin.ModelAdmin):
+    list_display = ('name', 'order')
+
+
+admin.site.register(Banks, BanksAdmin)

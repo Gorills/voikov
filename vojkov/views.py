@@ -49,6 +49,6 @@ def ipoteka(request):
 
     context = {
         'ipoteks': Ipoteka.objects.all().order_by('id'),
-        'banks': Banks.objects.all().order_by('id'),
+        'banks': Banks.objects.all().order_by('order'),
     }
     return render(request, 'vojkov/ipoteka.html', context)
